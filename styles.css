@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+	background-color: black
+}
+
+/* Three.js stuff... */
+
+/* end... */
+
+.bg_container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.left_bar {
+	display: flex;
+	flex-basis: 500px;
+	flex-direction: column;
+	color: white;
+	font-family: 'source_sans_probold';
+	padding: 10px;
+	margin: 0px;
+}
+
+.fullname {
+	line-height: 45px;
+	font-size: 60px;
+	font-family: 'source_sans_probold';
+}
+
+.email {
+	font-family: 'source_sans_proregular';
+	
+}
+
+.flag-swe {
+	height: 18px;
+	position: relative;
+	top: 5px;
+}
+
+.flag-usa {
+	height: 18px;
+	position: relative;
+	top: 5px;
+}
+
+#sobel {
+	width: 100%;
+	height: 300px;
+	margin: 10px auto;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+}
+
+.menu {
+	margin: 10px auto;
+	overflow: auto;
+	width: 100%;
+}
+
+.menu ul {
+	width: 100%;
+	background-color: black;
+	border-style: solid;
+	border-width: 2px;	
+	color: white;
+	padding: 10px;
+	margin: 0;
+	font-family: 'source_sans_probold';
+	font-size:xx-large;
+	list-style: none;
+}
+
+.menu li {
+	padding: 4px
+}
+
+.menu li:hover {
+	color: #ffea29;
+	font-family: "source_sans_problack_italic";
+	text-indent: 10px;
+}
+
+.main {
+	display: flex;
+	width: 100%;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	padding: 10px;
+	font-family: 'source_sans_proregular';
+	overflow-x: hidden;
+	overflow-y: auto;
+}
