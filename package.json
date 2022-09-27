@@ -10,5 +10,16 @@
   "license": "ISC",
   "devDependencies": {
     "three": "^0.141.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1littlelamb/felixslothowerDotcom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/1littlelamb/felixslothowerDotcom/issues"
+  },
+  "homepage": "https://github.com/1littlelamb/felixslothowerDotcom#readme",
+  "dependencies": {
+    "three.js": "^0.77.0"
   }
 }

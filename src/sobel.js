@@ -1,17 +1,17 @@
-import * as THREE from './node_modules/three';
+import * as THREE from 'three';
 
-import { GUI } from './node_modules/three/examples/jsm/libs/lil-gui.module.min.js';
+import { GUI } from '../node_modules/three/examples/jsm/libs/lil-gui.module.min.js';
 
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
 
-import { EffectComposer } from './node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/RenderPass.js';
-import { ShaderPass } from './node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
+import { EffectComposer } from '../node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from '../node_modules/three/examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from '../node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
 
-import { LuminosityShader } from './node_modules/three/examples/jsm/shaders/LuminosityShader.js';
-import { SobelOperatorShader } from './node_modules/three/examples/jsm/shaders/SobelOperatorShader.js';
+import { LuminosityShader } from '../node_modules/three/examples/jsm/shaders/LuminosityShader.js';
+import { SobelOperatorShader } from '../node_modules/three/examples/jsm/shaders/SobelOperatorShader.js';
 
-import { STLLoader } from './node_modules/three/examples/jsm/loaders/STLLoader.js';
+import { STLLoader } from '../node_modules/three/examples/jsm/loaders/STLLoader.js';
 
 let camera, scene, renderer, composer;
 
@@ -45,23 +45,23 @@ function init() {
 
 	// ASCII file
 
-	//const loader = new STLLoader();
-	//loader.load( './models/cube_twist.stl', function ( geometry ) {
+	const loader = new STLLoader();
+	loader.load( './models/two_plus.stl', function ( geometry ) {
 
-	//	const material = new THREE.MeshPhongMaterial( { color: 0xff5533 } );
-	//	const mesh = new THREE.Mesh( geometry, material );
+		const material = new THREE.MeshPhongMaterial( { color: 0xff5533 } );
+		const mesh = new THREE.Mesh( geometry, material );
 
-	//	mesh.scale.set(0.5,0.5,0.5)
+		mesh.scale.set(0.5,0.5,0.5)
 
-	//	scene.add( mesh );
+		scene.add( mesh );
 
-	//} );
+	} );
 
-	const geometry = new THREE.TorusKnotGeometry( 8, 3, 256, 32, 2, 3 );
-	const material = new THREE.MeshPhongMaterial( { color: 0xffff00 } );
+	//const geometry = new THREE.TorusKnotGeometry( 8, 3, 256, 32, 2, 3 );
+	//const material = new THREE.MeshPhongMaterial( { color: 0xffff00 } );
 
-	const mesh = new THREE.Mesh( geometry, material );
-	scene.add( mesh );
+	//const mesh = new THREE.Mesh( geometry, material );
+	//scene.add( mesh );
 
 	//
 
@@ -97,13 +97,6 @@ function init() {
 	controls.minDistance = 10;
 	controls.maxDistance = 100;
 
-	//
-
-	const gui = new GUI();
-
-	gui.add( params, 'enable' );
-	gui.open();
-
 	// Removed resize function since the div should not be changing size
 
 	//window.addEventListener( 'resize', onWindowResize );
@@ -127,14 +120,6 @@ function animate() {
 
 	requestAnimationFrame( animate );
 
-	if ( params.enable === true ) {
-
-		composer.render();
-
-	} else {
-
-		renderer.render( scene, camera );
-
-	}
+	composer.render()
 
 }
