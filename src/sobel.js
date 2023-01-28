@@ -10,7 +10,6 @@ import { SobelOperatorShader } from '../node_modules/three/examples/jsm/shaders/
 import { STLLoader } from '../node_modules/three/examples/jsm/loaders/STLLoader.js';
 
 let camera, scene, renderer, composer, pivot;
-let mesh;
 let effectSobel;
 
 const targets = {
@@ -39,7 +38,7 @@ function init(targets) {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera( 70, w/h, 0.1, 200 );
-	camera.position.set( 0, 0, 25 );
+	camera.position.set( 0, 0, 27 );
 	camera.lookAt( scene.position );
 
 	//
@@ -118,7 +117,7 @@ function init(targets) {
 	});
 
 	const buttonWelding = document.getElementById('welding');
-	buttonWelding.addEventListener('hover', function() {
+	buttonWelding.addEventListener('mouseover', function() {
 
 		switchMesh(targets.welding);
 

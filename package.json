@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/1littlelamb/felixslothowerDotcom#readme",
   "dependencies": {
+    "markdown-it": "^13.0.1",
     "three.js": "^0.77.0"
   }
 }
