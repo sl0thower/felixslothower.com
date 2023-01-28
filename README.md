@@ -16,7 +16,6 @@ This is likely 10x more painful than just using Gatsby or some other shit like t
 - Expand to include a blog and photo library
 - Host using aws Cloudfront and Origin Access Identity (OAI) so that my S3 bucket isn't public
 
-![image info](./images/website_screenshot.png)
 
 
 
