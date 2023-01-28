@@ -13,8 +13,8 @@ The resulting .html is loaded in the relevant page.html in the "main" \<div\>.
 This is likely 10x more painful than just using Gatsby or some other shit like that but kinda just had to do it this way.
 
 ## Later plans
-I would like to expand my website beyond just a portfolio and also make it the resting place for a blog and potentially a photo library of my nice photos.
-
+- Expand to include a blog and photo library
+- Host using aws Cloudfront and Origin Access Identity (OAI) so that my S3 bucket isn't public
 
 ![image info](./images/website_screenshot.png)
 
