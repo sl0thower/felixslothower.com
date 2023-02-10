@@ -10,8 +10,10 @@
 
 /* end... */
 
+/* to remove the fixed right pane see .left_bar class and make position:absolute */
+
 html,body {
-	height:fit-content;
+	height:99%;
 }
 
 center {
@@ -48,6 +50,7 @@ h1 {
 h2 {
 	font-size: 2em;
 }
+
 h3 {
 	font-size: 1.5em;
 }
@@ -78,10 +81,12 @@ a {
 	text-decoration: none;
 	color: #EFEBE8;
 }
+
 a:visited {
 	text-decoration: none;
 	color: #EFEBE8;
 }
+
 a:hover {
 	color: #ffea29;
 }
@@ -90,15 +95,16 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
+	height:fit-content;
 }
 
 .left_bar_placeholder{
 	flex: 0 0 20em;
+	
 }
 
 .left_bar {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	width: 20em;
@@ -108,8 +114,6 @@ a:hover {
 	margin-right: 5px;
 	height: 99vh;
 }
-
-
 
 .fullname {
 	flex:auto;
@@ -210,7 +214,7 @@ a:hover {
 	font-family: "source_sans_proitalic";
 }
 
-.main {
+#main {
 	flex: 0 1 1000px;
 	place-self: top;
 	background-color: #0f0f0f;
@@ -221,4 +225,3 @@ a:hover {
 	font-family: 'source_sans_proregular';
 	border-radius: 0.6em;
 }
-
