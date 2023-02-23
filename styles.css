@@ -118,6 +118,7 @@ a:hover {
 .fullname {
 	flex:auto;
 	padding-bottom: 0.1em;
+	padding-top: 0.2em;
 	line-height: 45px;
 	font-size: 60px;
 	font-family: 'source_sans_probold';
