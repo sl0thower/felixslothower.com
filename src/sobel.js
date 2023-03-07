@@ -102,53 +102,6 @@ function init(targets) {
 
 	camera.layers.enable(1);
 
-	const buttonAdditive = document.getElementById('additive');
-	buttonAdditive.addEventListener('mouseover', function() {
-
-		switchMesh(targets.additive);
-
-	});
-
-	const buttonCrypto = document.getElementById('crypto');
-	buttonCrypto.addEventListener('mouseover', function() {
-
-		switchMesh(targets.crypto);
-
-	});
-
-	const buttonWelding = document.getElementById('welding');
-	buttonWelding.addEventListener('mouseover', function() {
-
-		switchMesh(targets.welding);
-
-	});
-
-	const buttonActivity = document.getElementById('activity');
-	buttonActivity.addEventListener('mouseover', function() {
-
-		switchMesh(targets.activity);
-
-	});
-
-	const buttonWebsite = document.getElementById('this_website');
-	buttonWebsite.addEventListener('mouseover', function() {
-
-		switchMesh(targets.this_website);
-
-	});
-
-	const buttonAbout = document.getElementById('about');
-	buttonAbout.addEventListener('mouseover', function() {
-
-		switchMesh(targets.about);
-
-	});
-}
-
-function switchMesh(target) {
-	camera.layers.disableAll();
-	camera.layers.enable(0);
-	camera.layers.enable(target);
 }
 
 function animate() {
