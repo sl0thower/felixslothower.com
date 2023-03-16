@@ -2,6 +2,9 @@
     "spellchecker.ignoreWordsList": [
         "Workflow",
         "actvts",
-        "datapoints"
+        "datapoints",
+        "rev1",
+        "rev2",
+        "Crypto"
     ]
 }

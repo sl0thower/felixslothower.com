@@ -19,7 +19,12 @@ const targets = {
 	activity:      4,
 	this_website:  5,
 	about:         6
-}
+};
+
+const clock = new THREE.Clock();
+var currentMesh = targets.additive;
+var isRotating = true;
+var switched = false;
 
 init(targets);
 animate();
@@ -102,13 +107,59 @@ function init(targets) {
 
 	camera.layers.enable(1);
 
+	const buttonSobel = document.getElementById('sobel');
+	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
+
+	const buttonAdditive = document.getElementById('additive');
+	buttonAdditive.addEventListener('mouseover', function() {switchMesh(targets.additive); animate()});
+	buttonAdditive.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonAdditive.addEventListener('mousedown', function() {currentMesh = targets.additive});
+
+	const buttonCrypto = document.getElementById('crypto');
+	buttonCrypto.addEventListener('mouseover', function() {switchMesh(targets.crypto); animate()});
+	buttonCrypto.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonCrypto.addEventListener('mousedown', function() {currentMesh = targets.crypto});
+
+	const buttonWelding = document.getElementById('welding');
+	buttonWelding.addEventListener('mouseover', function() {switchMesh(targets.welding); animate()});
+	buttonWelding.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonWelding.addEventListener('mousedown', function() {currentMesh = targets.welding});
+
+	const buttonActivity = document.getElementById('activity');
+	buttonActivity.addEventListener('mouseover', function() {switchMesh(targets.activity); animate()});
+	buttonActivity.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonActivity.addEventListener('mousedown', function() {currentMesh = targets.activity});
+
+	const buttonWebsite = document.getElementById('this_website');
+	buttonWebsite.addEventListener('mouseover', function() {switchMesh(targets.this_website); animate()});
+	buttonWebsite.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonWebsite.addEventListener('mousedown', function() {currentMesh = targets.this_website});
+
+	const buttonAbout = document.getElementById('about');
+	buttonAbout.addEventListener('mouseover', function() {switchMesh(targets.about); animate()});
+	buttonAbout.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	buttonAbout.addEventListener('mousedown', function() {currentMesh = targets.about});
+}
+
+function switchMesh(target) {
+	camera.layers.disableAll();
+	camera.layers.enable(0);
+	camera.layers.enable(target);
 }
 
 function animate() {
-
-	pivot.rotation.y += 0.005;
-	
+	if (!isRotating) {
+		switched = false;
+		composer.render();
+		return;
+	};
+	if (!switched) {
+		var timeDelta = clock.getDelta();
+		switched = true;
+	};
+	var timeDelta = clock.getDelta();
+	timeDelta *= 0.2;
+	pivot.rotateY(timeDelta);
 	composer.render();
-
 	requestAnimationFrame( animate );
 }

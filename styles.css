@@ -69,6 +69,20 @@ img {
 	border-radius: 0.6em;
 }
 
+.img_row {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	background: none;
+	overflow: auto;
+}
+
+.img_2row {
+	width: 45%;
+	flex: 1;
+	background: none;
+}
+
 figure,figcaption {
 	background: none;
 	color: #EFEBE8;

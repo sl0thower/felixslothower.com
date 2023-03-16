@@ -15,7 +15,10 @@ design process). Our first iteration was over engineered, and it took us longer 
 
 **rev1**
 
-`include drawing of rev1 here`
+<p class="img_row" align="center">
+  <img class="img_2row" alt="front" src=".\media\portfolio\welding_jig\rev1_front.svg"/>
+  <img class="img_2row" alt="isometric" src=".\media\portfolio\welding_jig\rev1_iso.svg"/>
+</p>
 
 **rev1** would require a lot of machining, some of which was probably overly difficult and complicated. But we were determined to push
 forward since we desperately needed a welding jig. The school year was coming to an end and we wanted something to show for our first year 
@@ -27,8 +30,10 @@ simpler the manufacturing would be. This was thanks to taking advantage of more 
 
 **rev2**
 
-`include image of rev2 here`
-
+<p class="img_row" align="center">
+  <img class="img_2row" alt="front" src=".\media\portfolio\welding_jig\rev2_front.svg"/>
+  <img class="img_2row" alt="isometric" src=".\media\portfolio\welding_jig\rev2_iso.svg"/>
+</p>
 This was our last revision that eventually got manufactured. Using a mix of tools in our garage and the machine shop on campus we were 
 able to make quick work of it. We were also pretty excited once it was finished hence the fancy images you see below.
 
