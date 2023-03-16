@@ -29,5 +29,14 @@ simpler the manufacturing would be. This was thanks to taking advantage of more 
 
 `include image of rev2 here`
 
-This was our last revision that eventually got manufactured, using a mix of tools in our garage and the machine shop on campus. We were 
-pretty excited once it was finished hence the fancy images you see below.
+This was our last revision that eventually got manufactured. Using a mix of tools in our garage and the machine shop on campus we were 
+able to make quick work of it. We were also pretty excited once it was finished hence the fancy images you see below.
+
+`include some fancy images`
+
+The spreadsheet containing the parts list and the relevant CAD files can be found below. I am not trying to hide anything here when it 
+comes to design specifics. In fact maybe I will even publish the drawings all the custom fabricated parts too. I would be pretty stoked
+if someone came along and used our design to build their own welding jig! Cheers.
+
+`include links to all the drawings?`
+
