@@ -1,20 +1,74 @@
 <h1 id="additive-bicycle">Additive Bicycle</h1>
-<p><em>Design of additively manufactured mountain bike.</em></p>
+<p><em>Design of an additively manufactured and weldless mountain
+bike.</em></p>
 <h3 id="background">Background</h3>
-<p>My first course in Machine Learning, taken during my undergrad at the
-University of California - Irvine, concluded with an open eneded project
-in activity recognition. The dataset comes from an organized experiment
-where nearly <em>20 users</em> conducted a variety of activities in
-short bursts of <em>5 minutes</em>.</p>
-<h3 id="data-pre-processing">Data Pre-Processing</h3>
-<figure>
-<img src="images/two_plus.svg"
-alt="Figure 2:  Recently I never had sex is my figure caption" />
-<figcaption aria-hidden="true"><strong>Figure 2:</strong>  Recently I
-never had sex is my figure caption</figcaption>
-</figure>
-<h3 id="learning">Learning</h3>
-<h3 id="results">Results</h3>
-<h3 id="more-figures">More Figures</h3>
-<h4 id="the-report-i-submitted-for-those-interested">The report I
-submitted for those interested</h4>
+<p>As my senior project at UCI, me and two other friends tried to
+imagine what the future of high performance mountain-biking might look
+like. New technologies such as additive manufacturing in metal and
+ultra-high bond adhesives led us to rethink the way bicycles are
+manufactured. Using these technologies we believed a high performance,
+carbon and titanium mountain bike, could be custom fit to each customer
+and assembled without the need for laborious welding operations.</p>
+<p>This was the driving mission behind our project, but as some might
+already suspect, such a future is many years out as the cost of additive
+manufacturing still needs to come down for this to be a viable product.
+This idea is not novel. There are multiple other companies and
+individuals doing something similar; Atherton Bikes, Bastion Cycles, a
+guy named Ralf Holleis who’s bike he called the Moorhuhn 129 (his bike
+is the crown jewel imo but never went into production).</p>
+<h3 id="d-modeling">3D Modeling</h3>
+<p>The bicycle is primarily made up of carbon tubes and 3D printed lugs.
+The lugs were modeled in CAD and allow for updates in the underlying
+geometry to allow for a custom spec for each customer. I pushed myself
+to use the more advanced surfacing techniques available in Solidworks so
+that I could achieve more natural and smooth radiuses. As Solidworks is
+not the best surfacing tool, the modeling of the lugs came with several
+setbacks and reworks. But in the end I was able to model the headtube
+lug, bottom bracket lug and seattube lug.</p>
+<p class="img_row" align="center">
+<img alt="frame" src=".\media\portfolio\additive_bicycle\Gluebi_v1.png"/>
+</p>
+<p class="img_row" align="center">
+<img class="img_3row" alt="downtube_render" src=".\media\portfolio\additive_bicycle\Down Tube Closeup.png"/>
+<img class="img_3row" alt="headtube_render" src=".\media\portfolio\additive_bicycle\Head Tube Closeup.png"/>
+<img class="img_3row" alt="headtube_cross" src=".\media\portfolio\additive_bicycle\post bool add headtube.png"/>
+</p>
+<h3 id="simulations">Simulations</h3>
+<p>Two different simulation tools were used; nTopology and Abacus.
+Screenshots from both tools are shown respectively. nTopology was used
+to simulate the rider load at the bottom bracket and analyze the
+strength of our design. Abacus was used to model the carbon tube layups
+and decide on a suitable strength for our application. We were not able
+to do a full assembly simulation due to limited computer resources so
+discrete simulations were carried out instead.</p>
+<p class="img_row" align="center">
+<img class="img_2row" alt="simulation_nTop" src=".\media\portfolio\additive_bicycle\BB Sim 1.png"/>
+<img class="img_2row" alt="simulation_abacus" src=".\media\portfolio\additive_bicycle\Tube_ply.png"/>
+</p>
+<h3 id="production">Production</h3>
+<p>With the school year coming to a close we had just enough time to
+launch two prints, the first being only a small section of the seattube
+lug as seen in the first image. Print management and instructions were
+handled with Autodesk Netfabb. We were also able to print the full
+bottom bracket lug.</p>
+<p>I feel like it’s only fair to mention that due to poor design
+oversight (and not conducting a rigorous design review!) some of the
+dimensions were improperly spec’d.  It came as a heavy blow to the
+team’s moral but there was reason to point fingers, everyone held the
+responsibility to check and then re-check all the dimensions. Looking
+back on this I am still proud of what we were able to accomplish, and
+while it may have it’s flaws, the bottom bracket sits proudly on my
+shelf, like a trophy.</p>
+<p class="img_row" align="center">
+<img class="img_3row" alt="build-plate" src=".\media\portfolio\additive_bicycle\IMG_2312.jpg">
+<img class="img_3row" alt="machining-ops" src=".\media\portfolio\additive_bicycle\IMG_2334.jpg">
+<img class="img_3row" alt="SLM-interior" src=".\media\portfolio\additive_bicycle\IMG_2350.jpg">
+</p>
+<p class="img_row" align="center">
+<img alt="printed-bb-vice" src=".\media\portfolio\additive_bicycle\IMG_4998_cropped.jpg">
+</p>
+<p class="img_row" align="center">
+<img alt="printed-bb" src=".\media\portfolio\additive_bicycle\IMG-8908.jpg">
+</p>
+<p>Finally, I want to give credit to the other members of the team. Some
+solid project partners and happy to still call them friends today.</p>

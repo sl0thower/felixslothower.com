@@ -72,15 +72,26 @@ img {
 .img_row {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	gap: 5px;
 	background: none;
 	overflow: auto;
 }
 
 .img_2row {
-	width: 45%;
+	max-width: 45%;
 	flex: 1;
 	background: none;
+	object-fit: cover;
+	align-self: center;
+}
+
+.img_3row {
+	width: 32%;
+	flex: 1;
+	background: none;
+	object-fit: cover;
+	align-self: center;
 }
 
 figure,figcaption {
