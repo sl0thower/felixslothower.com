@@ -12,7 +12,7 @@ Below are some illustrations of how the data is distributed for different activi
 <img src=".\media\portfolio\activity_recognition\all_actvts.svg">
 </center>
 
-Below we see data for one activity from twenty different users. Standing still is sure to give us a concentrated set of acceleration data however each user has their phone oriented relative to their body in different ways. From this it should be clear that mobile phone orientation will not be very informative when it comes to predicting specific activities.
+Below we see data for one activity from twenty different users. Standing still is sure to give us a concentrated set of acceleration data however each user has their phone oriented relative to their body in different ways. From this it should be clear that the exact mobile phone orientation will be less significant than the relative changes in acceleration when it comes to predicting various activities. 
 
 <center>
 <img src=".\media\portfolio\activity_recognition\user_standing.svg">
@@ -20,7 +20,7 @@ Below we see data for one activity from twenty different users. Standing still i
 
 ### Data Pre-Processing
 
-
+Since I was limited to the use of traditional machine learning models
 
 ### Learning
 
