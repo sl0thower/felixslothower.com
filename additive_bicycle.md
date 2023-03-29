@@ -4,13 +4,14 @@
 
 ### Background
 
-As my senior project at UCI, me and two other friends tried to imagine what the future of high performance mountain-biking might look like. New technologies
+For my senior project at UCI, me and two other friends tried to imagine what the future of high performance mountain-biking might look like. New technologies
 such as additive manufacturing in metal and ultra-high bond adhesives led us to rethink the way bicycles are manufactured. Using these technologies we believed 
 a high performance, carbon and titanium mountain bike, could be custom fit to each customer and assembled without the need for laborious welding operations.
 
 This was the driving mission behind our project, but as some might already suspect, such a future is many years out as the cost of additive manufacturing still 
 needs to come down for this to be a viable product. This idea is not novel. There are multiple other companies and individuals doing something similar; 
-Atherton Bikes, Bastion Cycles, a guy named Ralf Holleis who's bike he called the Moorhuhn 129 (his bike is the crown jewel imo but never went into production).
+Atherton Bikes, Bastion Cycles, a guy named Ralf Holleis who's bike he called the Moorhuhn 129 (this bike is the unspoken crown jewel, but sadly it never went into 
+production).
 
 ### 3D Modeling
 

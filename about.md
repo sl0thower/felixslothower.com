@@ -1,3 +1,11 @@
 # About Me
 
-This doesn't make much sense to have in the portfolio section of my website.
+`image of me; but only one!`
+
+I have a strong passion for science and technology, and have always been curious to learn more about the natural world. This passion has led to many professional and recreational endeavours as you might have already seen in my portfolio. But besides those projects, I have also taken up brewing beer, building a bedside table in oak and designing a concrete candle holder---all of which I try to neatly present in the photo below. 
+
+`image of three projects in one`
+
+While I do enjoy learning about the underlying science of fermentation, and learning that cement is caustic (lol); those last few projects can also be explained by my love for working with my hands. 
+
+I am currently wrapping up my Master's in Machine Learning and Control at Lund's Tekniska Högskolan (LTH). Before this I was a student at the University of California - Irvine studying Mechanical Engineering. The two fields of study might sound similar---machines and mechanical things---but to the unawares, this is not exactly the case. While there are some examples such as reinforcement learning in robotics, and perhaps topology optimization for niche manufacturing applications, generally the two domains don't overlap. 
