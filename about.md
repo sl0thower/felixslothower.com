@@ -1,10 +1,14 @@
 # About Me
 
-`image of me; but only one!`
+<p class="img_solo" align="center">
+  <img alt="frame" src=".\media\about\brazing.jpg"/>
+</p>
 
 I have a strong passion for science and technology, and have always been curious to learn more about the natural world. This passion has led to many professional and recreational endeavours as you might have already seen in my portfolio. But besides those projects, I have also taken up brewing beer, building a bedside table in oak and designing a concrete candle holder---all of which I try to neatly present in the photo below. 
 
-`image of three projects in one`
+<p class="img_solo" align="center">
+  <img alt="frame" src=".\media\about\sketch_of_products.png" />
+</p>
 
 While I do enjoy learning about the underlying science of fermentation, and learning that cement is caustic (lol); those last few projects can also be explained by my love for working with my hands. 
 

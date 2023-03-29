@@ -64,9 +64,21 @@ p,strong,em {
 }
 
 img {
-	width: 40em;
 	background: none;
 	border-radius: 0.6em;
+	width: auto;
+	height: auto;
+	max-width: 600px;
+	max-height: 600px;
+}
+
+.img_solo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5px;
+	background: none;
+	/* overflow: auto; */
 }
 
 .img_row {
@@ -75,7 +87,9 @@ img {
 	justify-content: center;
 	gap: 5px;
 	background: none;
-	overflow: auto;
+	/* overflow: auto;
+	width: auto;
+	height: auto; */
 }
 
 .img_2row {
