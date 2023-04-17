@@ -1,5 +1,5 @@
-# About Me
 
+# About Me
 <p class="img_solo" align="center">
   <img alt="frame" src=".\media\about\brazing.jpg"/>
 </p>
@@ -13,3 +13,4 @@ I have a strong passion for science and technology, and have always been curious
 While I do enjoy learning about the underlying science of fermentation, and learning that cement is caustic (lol); those last few projects can also be explained by my love for working with my hands. 
 
 I am currently wrapping up my Master's in Machine Learning and Control at Lund's Tekniska Högskolan (LTH). Before this I was a student at the University of California - Irvine studying Mechanical Engineering. The two fields of study might sound similar---machines and mechanical things---but to the unawares, this is not exactly the case. While there are some examples such as reinforcement learning in robotics, and perhaps topology optimization for niche manufacturing applications, generally the two domains don't overlap. 
+
