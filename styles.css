@@ -59,7 +59,7 @@ p,strong,em {
 	margin-top: 0.2em;
     background: none;
     font-size: 1.25rem;
-	color: #adadad;
+	color:#e2e2e2;
 	line-height: 130%
 }
 
@@ -74,10 +74,13 @@ img {
 
 .img_solo {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	gap: 5px;
 	background: none;
+	font-size: 1.1em;
+	font-style: italic;
+	color:#adadad
 	/* overflow: auto; */
 }
 
@@ -116,8 +119,13 @@ figure,figcaption {
 	text-align: center;
 }
 
+blockquote {
+	background: none;
+}
+
 a {
 	text-decoration: none;
+	background: none;
 	color: #EFEBE8;
 }
 
@@ -243,6 +251,7 @@ a:hover {
 
 .moreLinks li:hover {
 	font-family: 'source_sans_proitalic';
+	color:#ffea29;
 }
 
 #signature {
