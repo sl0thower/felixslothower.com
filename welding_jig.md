@@ -49,9 +49,4 @@ able to make quick work of it. We were also pretty excited once it was finished;
   <img class="img_2row" alt="isometric" src=".\media\portfolio\welding_jig\headshot.jpg"/>
 </p>
 
-The spreadsheet containing the parts list and the relevant CAD files can be found below. I am not trying to hide anything here when it 
-comes to design specifics. In fact maybe I will even publish the drawings all the custom fabricated parts too. I would be pretty stoked
-if someone came along and used our design to build their own welding jig!
-
-`include links to all the drawings?`
 

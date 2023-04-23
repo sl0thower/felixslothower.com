@@ -58,7 +58,7 @@ h3 {
 p,strong,em {
 	margin-top: 0.2em;
     background: none;
-    font-size: 1.1em;
+    font-size: 16pt;
 	color: #adadad;
 	line-height: 130%
 }
@@ -255,6 +255,11 @@ a:hover {
 }
 
 #main {
+	background: none;
+	height: calc(100% + 30vh);
+}
+
+#main-wrapper {
 	flex: 0 1 1000px;
 	place-self: top;
 	background-color: #0f0f0f;
