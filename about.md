@@ -1,4 +1,3 @@
-# About Me
 
 I have never been good at writing about myself but if I had to give it a shot it would probably start with explaining that I really enjoy making things. I have been like this since as early as I can remember. Perhaps from reading through some of my portfolio this much is already clear. So I guess I could also mention that I spend a lot of time on a bicycle; mountain-biking, gravel-biking, commute-biking and fixing bikes. Sometimes I'll also spend my free time in the wilderness, intentionally getting lost, and then hopefully finding my way again! Finally I will share a rather over-zealous photo of myself brazing a lugged bicycle frame, which admittedly I never saw through to the end (you'll have to visit [Tony's](https://tonydrabeck.com/) website for the final product).
 
