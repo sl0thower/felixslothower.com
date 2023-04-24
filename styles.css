@@ -63,6 +63,25 @@ p,strong,em {
 	line-height: 130%
 }
 
+table {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.5em;
+	/* background: none; */
+	border-radius: 0.6em;
+	color:#e2e2e2
+}
+
+tbody,thead,th,tr,td {
+	background: none;
+	padding: 0.1em;
+	text-align: left;
+}
+
+td {
+	padding-right: 01em;
+}
+
 img {
 	background: none;
 	border-radius: 0.6em;
@@ -124,14 +143,12 @@ blockquote {
 }
 
 a {
-	text-decoration: none;
-	background: none;
-	color: #EFEBE8;
+	background:none;
+	color:#e2e2e2
 }
 
 a:visited {
 	text-decoration: none;
-	color: #EFEBE8;
 }
 
 a:hover {

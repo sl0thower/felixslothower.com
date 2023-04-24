@@ -20,18 +20,35 @@ Below we see data for one activity from twenty different users. Standing still i
 
 ### Data Pre-Processing
 
-Since I was limited to the use of traditional machine learning models
+With gigabytes of data, spread across many different files and folders, this stage of the project was easily the most laborious. Eventually everything was packed neatly into one single data structure, using a windowing method that I try to illustrate in the below graphic. Looking at windows of time allows for richer insights into the what the user is doing and was a necessary feature considering the models I used for training were time-agnostic.
+
+<center>
+<img src=".\media\portfolio\activity_recognition\windowing_white.svg">
+</center>
+
+Features were then extracted from each window, these included the mean value, variance, most prominent frequency, integral and more. I include a neat example of when the most prominent frequency, calculated by performing a fourier transform, might be of use. In this example, it is clear that the back and forth motion of the users arm while brushing their teeth is being registered by the watches accelerometer.
+
+<center>
+<img src=".\media\portfolio\activity_recognition\fft_grid_alt1.svg">
+</center>
 
 ### Learning
 
-
+The machine learning algorithms covered throughout the course are what is considered to be the traditional set of algorithms, of which I am excluding the now very popular network architectures (so LSTM's are out). The models I *did* use include; quadratic discriminant analysis (QDA), k-Nearest Neighbor (KNN), support vector machines (SVM) and random forests (RF). I will not explain how each of these work but if you want more context you are free to look at the full report attached at the end.  
 
 ### Results
 
+Again, I will abbreviate my analysis of the results here and instead point you towards the full paper. I will however share this table;
 
+| Model          | Accuracy |
+|----------------|----------|
+| QDA            | 53.96%   |
+| KNN            | 54.89%   |
+| SVM-Linear     | 62.78%   |
+| SVM-Polynomial | 59.67%   |
+| SVM-Radial     | 65.77%   |
+| RF             | 70.47%   |
 
-### More Figures
+Accuracy here means that the model correctly predicted the activity taking place during a window of recorded time. I also discovered, rather intuitively, that discerning between similar activities, such as the eating of different types of food, was much harder than predicting whether the user was either writing or clapping.
 
-
-
-#### The report I submitted for those interested
+Anyways, here is the [full report](link to full report)

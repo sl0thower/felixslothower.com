@@ -37,8 +37,75 @@ acceleration when it comes to predicting various activities.</p>
 <img src=".\media\portfolio\activity_recognition\user_standing.svg">
 </center>
 <h3 id="data-pre-processing">Data Pre-Processing</h3>
+<p>With gigabytes of data, spread across many different files and
+folders, this stage of the project was easily the most laborious.
+Eventually everything was packed neatly into one single data structure,
+using a windowing method that I try to illustrate in the below graphic.
+Looking at windows of time allows for richer insights into the what the
+user is doing and was a necessary feature considering the models I used
+for training were time-agnostic.</p>
+<center>
+<img src=".\media\portfolio\activity_recognition\windowing_white.svg">
+</center>
+<p>Features were then extracted from each window, these included the
+mean value, variance, most prominent frequency, integral and more. I
+include a neat example of when the most prominent frequency, calculated
+by performing a fourier transform, might be of use. In this example, it
+is clear that the back and forth motion of the users arm while brushing
+their teeth is being registered by the watches accelerometer.</p>
+<center>
+<img src=".\media\portfolio\activity_recognition\fft_grid_alt1.svg">
+</center>
 <h3 id="learning">Learning</h3>
+<p>The machine learning algorithms covered throughout the course are
+what is considered to be the traditional set of algorithms, of which I
+am excluding the now very popular network architectures (so LSTM’s are
+out). The models I <em>did</em> use include; quadratic discriminant
+analysis (QDA), k-Nearest Neighbor (KNN), support vector machines (SVM)
+and random forests (RF). I will not explain how each of these work but
+if you want more context you are free to look at the full report
+attached at the end.</p>
 <h3 id="results">Results</h3>
-<h3 id="more-figures">More Figures</h3>
-<h4 id="the-report-i-submitted-for-those-interested">The report I
-submitted for those interested</h4>
+<p>Again, I will abbreviate my analysis of the results here and instead
+point you towards the full paper. I will however share this table;</p>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>QDA</td>
+<td>53.96%</td>
+</tr>
+<tr class="even">
+<td>KNN</td>
+<td>54.89%</td>
+</tr>
+<tr class="odd">
+<td>SVM-Linear</td>
+<td>62.78%</td>
+</tr>
+<tr class="even">
+<td>SVM-Polynomial</td>
+<td>59.67%</td>
+</tr>
+<tr class="odd">
+<td>SVM-Radial</td>
+<td>65.77%</td>
+</tr>
+<tr class="even">
+<td>RF</td>
+<td>70.47%</td>
+</tr>
+</tbody>
+</table>
+<p>Accuracy here means that the model correctly predicted the activity
+taking place during a window of recorded time. I also discovered, rather
+intuitively, that discerning between similar activities, such as the
+eating of different types of food, was much harder than predicting
+whether the user was either writing or clapping.</p>
+<p>Anyways, here is the <a href="link%20to%20full%20report">full
+report</a></p>

@@ -18,12 +18,12 @@ My biggest challenge when making this website, which started out as just a portf
 
 I guess the only interesting thing worth mentioning is that each of the portfolio pages was written as a markdown file (.md) and then converted to an .html page with a tool called `pandoc`. I then used a bit of javascript to load up each page into the empty div on the right (kinda like the page you are reading now). This made formatting each page a lot easier.
 
-If I haven't done it already I plan on adding a blog to my website with an RSS feed for my friends and family to follow. Such a solution is my way of sharing what I'm up to while avoiding the engineered death scroll of Instagram et. al. And (admitting some sass) if someone cares enough it shouldn't be too hard to download a free RSS reader and punch in my url. :blush:
+If I haven't done it already I plan on adding a blog to my website with an RSS feed for my friends and family to follow. Such a solution is my way of sharing what I'm up to while avoiding the engineered death scroll of Instagram et. al. And (admitting some sass) if someone cares enough it shouldn't be too hard to download a free RSS reader and punch in my url.
 
 ### Linx
 
 pandoc: [pandoc.org](https://pandoc.org/)\
 Sobel filter: [threejs.org/examples/sobel](https://threejs.org/examples/?q=sobel#webgl_postprocessing_sobel)\
 three.js: [threejs.org](https://threejs.org/)\
-docs: [w3schools.com](https://www.w3schools.com/html/html_basic.asp)
+docs: [w3schools.com](https://www.w3schools.com/html/html_basic.asp)\
 
