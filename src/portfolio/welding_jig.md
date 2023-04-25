@@ -40,13 +40,13 @@ This was our last revision that eventually got manufactured. Using a mix of tool
 able to make quick work of it. We were also pretty excited once it was finished; hence the fancy pictures.
 
 <p class="img_row" align="center">
-  <img class="img_2row" alt="full" src=".\media\portfolio\welding_jig\full.JPG"/>
-  <img class="img_2row" alt="meching" src=".\media\portfolio\welding_jig\meching.JPG"/>
+  <img class="img_2row" alt="full" src=".\media\portfolio\welding_jig\full.jpg"/>
+  <img class="img_2row" alt="meching" src=".\media\portfolio\welding_jig\meching.jpg"/>
 </p>
 
 <p class="img_row" align="center">
-  <img class="img_2row" alt="rear_axle" src=".\media\portfolio\welding_jig\rear_axle.JPG"/>
-  <img class="img_2row" alt="headshot" src=".\media\portfolio\welding_jig\headshot.JPG"/>
+  <img class="img_2row" alt="rear_axle" src=".\media\portfolio\welding_jig\rear_axle.jpg"/>
+  <img class="img_2row" alt="headshot" src=".\media\portfolio\welding_jig\headshot.jpg"/>
 </p>
 
 
