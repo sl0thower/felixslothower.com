@@ -142,6 +142,13 @@ blockquote {
 	background: none;
 }
 
+blockquote p{
+	color:#818181;
+	border-left: 0.1em solid #818181;
+	padding-left: 10px;
+	font-style: italic;
+}
+
 a {
 	background:none;
 	color:#e2e2e2

@@ -9,17 +9,29 @@ import { SobelOperatorShader } from '../node_modules/three/examples/jsm/shaders/
 
 import { STLLoader } from '../node_modules/three/examples/jsm/loaders/STLLoader.js';
 
+// specify the directory path you want to list the files of
+const directoryPath = '/path/to/your/directory';
+
 let camera, scene, renderer, composer, pivot;
 let effectSobel;
 
 const targets = {
 	additive:      1,
-	crypto:        2,
-	welding:       3,
-	activity:      4,
-	this_website:  5,
-	about:         6
+	// crypto:        2,
+	welding:       2,
+	activity:      3,
+	this_website:  4,
+	about:         5
 };
+
+const files = [
+	'./models/headtube.stl',
+	'./models/welding_jig.stl',
+	'./models/apple_watch.stl',
+	'./models/world.stl',
+	'./models/two_plus_candle.stl',
+	// '../models/'
+]
 
 const clock = new THREE.Clock();
 var currentMesh = targets.additive;
@@ -38,7 +50,7 @@ function init(targets) {
     renderer.setSize(w, h);
     container.appendChild(renderer.domElement);
 
-	//
+	// init scene + camera
 
 	scene = new THREE.Scene();
 
@@ -46,33 +58,34 @@ function init(targets) {
 	camera.position.set( 0, 0, 27 );
 	camera.lookAt( scene.position );
 
-	//
-
-	//const loader = new STLLoader();
-	//loader.load( './models/two_plus.stl', function ( geometry ) {
-//
-//		const material = new THREE.MeshPhongMaterial( { color: 0xff5533 } );
-//		const mesh = new THREE.Mesh( geometry, material );
-//
-//		mesh.scale.set(0.5,0.5,0.5)
-//
-//		scene.add( mesh );
-//
-//	} );
+	// load the models
 
 	pivot = new THREE.Group();
 	const material = new THREE.MeshPhongMaterial( { color: 0xffff00 } );
 
+	const loader = new STLLoader();
 	for ( let k = 0; k <= Object.keys(targets).length; k ++ ) {
-		const geometry = new THREE.TorusKnotGeometry( 7.5, 3, 256, 32, 1, k );
-		const mesh = new THREE.Mesh( geometry, material );
-		mesh.layers.set( k + 1 )
-		mesh.name = Object.keys(targets)[k]
-		pivot.add( mesh )
+		loader.load(files[k], function ( geometry ) {
+				const material = new THREE.MeshPhongMaterial( { color: 0xff5533 } );
+				const mesh = new THREE.Mesh( geometry, material );
+				mesh.layers.set( k + 1 )		
+				mesh.name = Object.keys(targets)[k]
+				// mesh.scale.set(0.5,0.5,0.5)
+				pivot.add( mesh );
+		});
 	}
 
+	// for ( let k = 0; k <= Object.keys(targets).length; k ++ ) {
+	// 	const geometry = new THREE.TorusKnotGeometry( 7.5, 3, 256, 32, 1, k );
+	// 	const mesh = new THREE.Mesh( geometry, material );
+	// 	mesh.layers.set( k + 1 )
+	// 	mesh.name = Object.keys(targets)[k]
+	// 	pivot.add( mesh )
+	// }
+
 	scene.add( pivot )
-	//
+	
+	// scene lighting
 
 	const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
 	scene.add( ambientLight );
@@ -115,10 +128,10 @@ function init(targets) {
 	buttonAdditive.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
 	buttonAdditive.addEventListener('mousedown', function() {currentMesh = targets.additive});
 
-	const buttonCrypto = document.getElementById('crypto');
-	buttonCrypto.addEventListener('mouseover', function() {switchMesh(targets.crypto); animate()});
-	buttonCrypto.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonCrypto.addEventListener('mousedown', function() {currentMesh = targets.crypto});
+	// const buttonCrypto = document.getElementById('vision');
+	// buttonCrypto.addEventListener('mouseover', function() {switchMesh(targets.crypto); animate()});
+	// buttonCrypto.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
+	// buttonCrypto.addEventListener('mousedown', function() {currentMesh = targets.crypto});
 
 	const buttonWelding = document.getElementById('welding');
 	buttonWelding.addEventListener('mouseover', function() {switchMesh(targets.welding); animate()});

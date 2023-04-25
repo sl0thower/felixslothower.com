@@ -8,7 +8,7 @@ I am proud enough of my website at the moment to include a whole page about it i
 
 Another inspiration was the wireframe model view that is offered in Solidworks along with the WebGL based, interactive rendering that you can create in the Solidworks Composer tool. It took a while to figure out how I could replicate this on the website but I am pleased with the result. The process uses a Sobel filter which is a type of edge detector that produces the sharp white lines you see on the spinning model. It isn't the exact same as the Solidworks version but this is because I am only providing `three.js` (the rendering package) with an .stl and not the original CAD file. 
 
->*P.S. you can give your computer a rest and pause the animation by clicking on it.* 
+>P.S. you can give your computer a rest and pause the animation by clicking on it.
 
 <p class="img_solo" align="center">
   <img style="margin-left:auto;margin-right:auto" alt="frame" src=".\media\portfolio\this_website\solidworks_screenshot.png" />A screenshot of the solidworks wireframe view for reference.

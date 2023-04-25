@@ -1,6 +1,6 @@
 # About me...
 
-I have never been good at writing about myself but if I had to give it a shot it would probably start with explaining that I really enjoy making things. I have been like this since as early as I can remember. Perhaps from reading through some of my portfolio this much is already clear. So I guess I could also mention that I spend a lot of time on a bicycle; mountain-biking, gravel-biking, commute-biking and fixing bikes. Sometimes, I'll also spend my free time in the wilderness, intentionally getting lost, and then hopefully finding my way again! Finally I will share a rather over-zealous photo of myself brazing a lugged bicycle frame, which admittedly I never saw through to the end (you'll have to visit [Tony's](https://tonydrabeck.com/) website for the final product).
+I have never been good at writing about myself but if I had to give it a shot it would probably start with explaining that I really enjoy making things. I have been like this since as early as I can remember. Perhaps from reading through some of my portfolio this much is already clear. So I guess I could also mention that I spend a lot of time on a bicycle; mountain-biking, gravel-biking, commute-biking and fixing bikes. My first job as a kid was at a bike shop. To wrap up my obsession with bicycles I will share a rather over-zealous photo of myself brazing a lugged bicycle frame, which admittedly I never saw through to the end (you'll have to visit [Tony's](https://tonydrabeck.com/) website for the final product).
 
 <p class="img_solo" align="center">
   <img style="margin-left:auto;margin-right:auto" alt="frame" src=".\media\about\brazing.jpg"/>
@@ -11,6 +11,8 @@ Besides the projects I cover in this portfolio, some of my more recreational end
 <p class="img_solo" align="center">
   <img style="margin-left:auto;margin-right:auto" alt="frame" src=".\media\about\my_things.jpg"/>
 </p> 
+
+>Notice, that I am not trying to claim I make a great beer, or even a good beer. In fact, if I had to rate my average homebrew it would be closer to a 5/10 than a 10/10. After talking with the experts (the brewmaster at my friends brewery), it seems like the next step towards making my beers taste more crisp is controlling the fermentation temperature. During peak fermentation the beer can jump in temperature pretty severly, stressing the yeast and giving the beer a slightly clammy feeling (not crisp).
 
 ### As for my education;
 
