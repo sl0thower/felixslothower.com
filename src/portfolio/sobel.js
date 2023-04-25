@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 
-import { EffectComposer } from '../node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from '../node_modules/three/examples/jsm/postprocessing/RenderPass.js';
-import { ShaderPass } from '../node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
+import { EffectComposer } from '../../node_modules/three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from '../../node_modules/three/examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from '../../node_modules/three/examples/jsm/postprocessing/ShaderPass.js';
 
-import { LuminosityShader } from '../node_modules/three/examples/jsm/shaders/LuminosityShader.js';
-import { SobelOperatorShader } from '../node_modules/three/examples/jsm/shaders/SobelOperatorShader.js';
+import { LuminosityShader } from '../../node_modules/three/examples/jsm/shaders/LuminosityShader.js';
+import { SobelOperatorShader } from '../../node_modules/three/examples/jsm/shaders/SobelOperatorShader.js';
 
-import { STLLoader } from '../node_modules/three/examples/jsm/loaders/STLLoader.js';
+import { STLLoader } from '../../node_modules/three/examples/jsm/loaders/STLLoader.js';
 
 // specify the directory path you want to list the files of
 const directoryPath = '/path/to/your/directory';
@@ -25,11 +25,11 @@ const targets = {
 };
 
 const files = [
-	'./models/headtube.stl',
-	'./models/welding_jig.stl',
-	'./models/apple_watch.stl',
-	'./models/world.stl',
-	'./models/two_plus_candle.stl',
+	'../../models/headtube.stl',
+	'../../models/welding_jig.stl',
+	'../../models/apple_watch.stl',
+	'../../models/world.stl',
+	'../../models/two_plus_candle.stl',
 	// '../models/'
 ]
 

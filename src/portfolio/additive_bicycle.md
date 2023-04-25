@@ -21,9 +21,9 @@ headtube lug, bottom bracket lug and seattube lug.
 </p>
 
 <p class="img_row" align="center">
-  <img class="img_3row" alt="downtube_render" src=".\media\portfolio\additive_bicycle\Down Tube Closeup.png"/>
-  <img class="img_3row" alt="headtube_render" src=".\media\portfolio\additive_bicycle\Head Tube Closeup.png"/>
-  <img class="img_3row" alt="headtube_cross" src=".\media\portfolio\additive_bicycle\post bool add headtube.png"/>
+  <img class="img_3row" alt="downtube_render" src=".\media\portfolio\additive_bicycle\Down_Tube_Closeup.png"/>
+  <img class="img_3row" alt="headtube_render" src=".\media\portfolio\additive_bicycle\Head_Tube_Closeup.png"/>
+  <img class="img_3row" alt="headtube_cross" src=".\media\portfolio\additive_bicycle\post_bool_add_headtube.png"/>
 </p>
 
 ### Simulations

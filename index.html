@@ -28,7 +28,7 @@
 						}
 					}
 				</script>
-				<script type="module" src="./src/sobel.js"></script>
+				<script type="module" src="./src/portfolio/sobel.js"></script>
 			</div>
 			<div class="menu">
 				<ul>
@@ -56,25 +56,25 @@
 			<div class="main" id="main">
 				<script>
 					$(document).ready( function() {
-						$("#main").load("additive_bicycle.html")
+						$("#main").load("src/portfolio/additive_bicycle.html")
 						$("#additive").on("click", function() {
-							$("#main").load("additive_bicycle.html");
+							$("#main").load("src/portfolio/additive_bicycle.html");
+						});
+						$("#welding").on("click", function() {
+							$("#main").load("src/portfolio/welding_jig.html");
+						});
+						$("#activity").on("click", function() {
+							$("#main").load("src/portfolio/activity_recognition.html");
+						});
+						$("#this_website").on("click", function() {
+							$("#main").load("src/portfolio/this_website.html");
+						});
+						$("#about").on("click", function() {
+							$("#main").load("src/portfolio/about.html");
 						});
 						// $("#vision").on("click", function() {
 						// 	$("#main").load("vision.html");
 						// });
-						$("#welding").on("click", function() {
-							$("#main").load("welding_jig.html");
-						});
-						$("#activity").on("click", function() {
-							$("#main").load("activity_recognition.html");
-						});
-						$("#this_website").on("click", function() {
-							$("#main").load("this_website.html");
-						});
-						$("#about").on("click", function() {
-							$("#main").load("about.html");
-						});
 					});
 				</script>
 			</div>
