@@ -51,4 +51,4 @@ Again, I will abbreviate my analysis of the results here and instead point you t
 
 Accuracy here means that the model correctly predicted the activity taking place during a window of recorded time. I also discovered, rather intuitively, that discerning between similar activities, such as the eating of different types of food, was much harder than predicting whether the user was either writing or clapping.
 
-Anyways, here is the [full report](link to full report)
+Anyways, here is the [full report](media/portfolio/activity_recognition/report.pdf)
