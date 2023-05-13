@@ -1,5 +1,7 @@
 # WebGL Website project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/89d5b397-2852-410e-bb73-459203d5472b/deploy-status)](https://app.netlify.com/sites/felix-slothower-personal/deploys)
+
 ## How to write a new page for portfolio
 
 It is looking like I will use the markdown-it parser tool with node.js in a seperate environment from this website project. It will then create the html code with CSS embedded and I will copy paste that into the new page. If I can I would have the html import a seperate .html file into that specific \<div\> where the markdown should go.
