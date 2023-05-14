@@ -1,3 +1,4 @@
 *.smg
 *.blend
 *.blend1
+node_modules/**
