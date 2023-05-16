@@ -12,7 +12,7 @@ Besides the projects I cover in this portfolio, some of my more recreational end
   <img style="margin-left:auto;margin-right:auto" alt="frame" src=".\media\about\my_things.jpg"/>
 </p> 
 
->Notice, that I am not trying to claim I make a great beer, or even a good beer. In fact, if I had to rate my average homebrew it would be closer to a 5/10 than a 10/10. After talking with the experts (the brewmaster at my friends brewery), it seems like the next step towards making my beers taste more crisp is controlling the fermentation temperature. During peak fermentation the beer can jump in temperature pretty severly, stressing the yeast and giving the beer a slightly clammy feeling (not crisp).
+>Notice, that I am not trying to claim I make a great beer, or even a good beer. In fact, if I had to rate my average homebrew it would be closer to a 5/10 than a 10/10. After talking with the experts (the brewmaster at my friends brewery), it seems like the next step towards making my beers taste more crisp is controlling the fermentation temperature. During peak fermentation the beer can jump in temperature pretty severely, stressing the yeast and giving the beer a slightly clammy feeling (not crisp).
 
 ### As for my education;
 
