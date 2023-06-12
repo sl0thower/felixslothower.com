@@ -1,0 +1,74 @@
+const path = require("path");
+const Image = require("@11ty/eleventy-img");
+
+module.exports = eleventyConfig => {
+	
+	// Eleventy Image shortcode
+	// https://www.11ty.dev/docs/plugins/image/
+	// eleventyConfig.addShortcode("image", async function imageShortcode(src, alt, widths, sizes) {
+		// 	// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
+	// 	// Warning: Avif can be resource-intensive so take care!
+	// 	let formats = ["webp", "jpg", "svg"];
+	// 	let file = relativeToInputPath(this.page.inputPath, src);
+	// 	let metadata = await Image(file, {
+	// 		widths: widths || [600],
+	// 		formats, 
+	// 		svgShortCircuit: true,
+	// 		outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+	// 	});
+
+	// 	// TODO loading=eager and fetchpriority=high
+	// 	let imageAttributes = {
+		// 		alt,
+		// 		sizes,
+		// 		loading: "lazy",
+	// 		decoding: "async",
+	// 	};
+	// 	return Image.generateHTML(metadata, imageAttributes);
+	// });
+	
+	function relativeToInputPath(inputPath, relativeFilePath) {
+		let split = inputPath.split("/");
+		split.pop();
+		return path.resolve(split.join(path.sep), relativeFilePath);
+	}
+	
+	eleventyConfig.addNunjucksAsyncShortcode("image", async function(src, alt, width) {
+		if(alt === undefined) {
+			// You bet we throw an error on missing alt (alt="" works okay)
+			throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+		}
+		
+		let file = relativeToInputPath(this.page.inputPath, src);
+		let metadata = await Image(file, {
+			widths: [width],
+			formats: ["jpeg", "svg"],
+			outputDir: path.join(eleventyConfig.dir.output, "img"),
+		});
+
+		let data = metadata.jpeg[metadata.jpeg.length - 1];
+		console.log(data)
+		return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+	});
+	
+	eleventyConfig.addNunjucksAsyncShortcode("image2", async function(src1, src2, alt, width) {
+		if(alt === undefined) {
+			// You bet we throw an error on missing alt (alt="" works okay)
+			throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+		}
+		
+		let file1 = relativeToInputPath(this.page.inputPath, src1);
+		let file2 = relativeToInputPath(this.page.inputPath, src2);
+		let metadata1 = await Image(file, {
+			widths: [width],
+			formats: ["jpeg", "svg"],
+			outputDir: path.join(eleventyConfig.dir.output, "img"),
+		});
+		let metadata2 = 
+
+		let data = metadata.jpeg[metadata.jpeg.length - 1];
+		console.log(data)
+		return `<p class="img_row" align="center"><img class="img_2row" alt="${alt}" src="${data.url}"/><img class="img_2row" alt="${alt}" src="${data.url}"/></p>`;
+	});
+
+};

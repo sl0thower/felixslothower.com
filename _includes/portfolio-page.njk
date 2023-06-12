@@ -1,0 +1,12 @@
+---
+layout: portfolio.njk
+---
+<h1>{{ title }}</h1>
+
+{{content | safe}}
+
+<hr class="footnotes-sep">
+
+<div class="page-metadata">
+	Modified:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
+</div>
