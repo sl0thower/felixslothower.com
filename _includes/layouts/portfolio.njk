@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+---
+<div class="bg_container">
+	<div class="left_bar_placeholder">
+		
+	<div class="left_bar">
+		<div class="fullname">Felix S.</div>
+		<div class="details "style="white-space:nowrap">
+			<div class="email"> 
+				<p>email.</p>
+				<p>felixslothower@gmail.com</p>
+			</div>
+			<div class="socials">
+				<a href="https://www.linkedin.com/in/felix-slothower-103a471a8/" class="socials-linkedin"><img src="/assets/socials/linkedin.svg"></a>
+				<a href="https://github.com/sl0thower" class="socials-github"><img src="/assets/socials/github.svg"></a>
+			</div>
+		</div>
+		<div id="sobel"> 
+			<script type="importmap">
+				{
+					"imports": {
+						"three": "./node_modules/three/build/three.module.js"
+					}
+				}
+			</script>
+			<script type="module" src="./src/portfolio/sobel.js"></script>
+		</div>
+
+		<div class="menu">
+			<ul>
+			{% for page in collections.projects %}
+			<li id="{{page.data.id}}">
+				<a href="{{ page.url }}">{% if page.data.title %}{{ page.data.title }}{% else %}<code>{{ page.url }}</code>{% endif %}</a>
+			</li>
+			{% endfor %}
+			</ul>
+		</div>
+		{# <div class="moreLinks">
+			<ul>
+				<li id="home">Home</li>
+				<li id="links">Links</li>
+			</ul>
+		</div> #}
+		<div class="signature">
+			Designed and built by Felix Slothower
+		</div>
+	</div></div>
+	
+	<div class="main-wrapper">
+		<div class="main">
+			{{content|safe}}
+		</div>  
+	</div>
+</div>
