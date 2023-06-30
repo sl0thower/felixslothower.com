@@ -262,17 +262,14 @@ picture.img_row img {
 	margin: 0px;
 }
 
-.socials {
+.icons {
 	display: grid;
-	grid-template-columns: 40px 40px 1fr;
+	grid-template-columns: 40px 40px 40px 1fr;
 }
 
-.socials-linkedin img {
-	margin:0;
-}
-
-.socials-github img {
-	margin:0;
+.icons a img {
+	margin: 0px;
+	border-radius: 0px;
 }
 
 .sobel {
