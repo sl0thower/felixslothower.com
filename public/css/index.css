@@ -30,7 +30,7 @@
     font-style: normal;
 }
 
-@media only screen and ((max-width: 850px) or (max-height: 800px)) {
+@media only screen and (min-device-pixel-ratio: 2) {
 	div .bg_container {
 		display: grid;
 		grid-template-rows: 180px 1fr 20px;
