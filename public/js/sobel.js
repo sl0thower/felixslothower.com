@@ -17,20 +17,18 @@ let effectSobel;
 
 const targets = {
 	additive:      1,
-	// crypto:        2,
 	welding:       2,
 	activity:      3,
 	this_website:  4,
-	about:         5
+	about:         5,
 };
 
 const files = [
-	'../../models/headtube.stl',
-	'../../models/welding_jig.stl',
-	'../../models/apple_watch.stl',
-	'../../models/world.stl',
-	'../../models/two_plus_candle.stl',
-	// '../models/'
+	'../models/headtube.stl',
+	'../models/welding_jig.stl',
+	'../models/apple_watch.stl',
+	'../models/world.stl',
+	'../models/two_plus_candle.stl',
 ]
 
 const clock = new THREE.Clock();
@@ -116,44 +114,24 @@ function init(targets) {
 	composer.addPass( effectSobel );
 
 	// Removed resize function since the div should not be changing size
-	//window.addEventListener( 'resize', onWindowResize );
+	// window.addEventListener( 'resize', onWindowResize );
 
-	camera.layers.enable(1);
-
+	// mouse events
+	
 	const buttonSobel = document.getElementById('sobel');
 	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
 
-	const buttonAdditive = document.getElementById('additive');
-	buttonAdditive.addEventListener('mouseover', function() {switchMesh(targets.additive); animate()});
-	buttonAdditive.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonAdditive.addEventListener('mousedown', function() {currentMesh = targets.additive});
+	for ( let k = 0; k <= Object.keys(targets).length; k ++ ) {
+		const mesh = document.getElementById(Object.keys(targets)[k]);
+		mesh.addEventListener( 'mouseover', function() {switchMesh(k + 1); animate()} );
+		mesh.addEventListener( 'mouseleave', function() {switchMesh(currentMesh); animate()} );
+		mesh.addEventListener( 'mousedown', function() {currentMesh = k + 1} );
+	}
 
-	// const buttonCrypto = document.getElementById('vision');
-	// buttonCrypto.addEventListener('mouseover', function() {switchMesh(targets.crypto); animate()});
-	// buttonCrypto.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	// buttonCrypto.addEventListener('mousedown', function() {currentMesh = targets.crypto});
+	camera.layers.enable(1);
 
-	const buttonWelding = document.getElementById('welding');
-	buttonWelding.addEventListener('mouseover', function() {switchMesh(targets.welding); animate()});
-	buttonWelding.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonWelding.addEventListener('mousedown', function() {currentMesh = targets.welding});
-
-	const buttonActivity = document.getElementById('activity');
-	buttonActivity.addEventListener('mouseover', function() {switchMesh(targets.activity); animate()});
-	buttonActivity.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonActivity.addEventListener('mousedown', function() {currentMesh = targets.activity});
-
-	const buttonWebsite = document.getElementById('this_website');
-	buttonWebsite.addEventListener('mouseover', function() {switchMesh(targets.this_website); animate()});
-	buttonWebsite.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonWebsite.addEventListener('mousedown', function() {currentMesh = targets.this_website});
-
-	const buttonAbout = document.getElementById('about');
-	buttonAbout.addEventListener('mouseover', function() {switchMesh(targets.about); animate()});
-	buttonAbout.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate()});
-	buttonAbout.addEventListener('mousedown', function() {currentMesh = targets.about});
 }
-
+	
 function switchMesh(target) {
 	camera.layers.disableAll();
 	camera.layers.enable(0);

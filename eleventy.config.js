@@ -28,7 +28,7 @@ module.exports = function(eleventyConfig) {
 		"./public/" : "/",
 		"./favicon.ico" : "./favicon.ico",
 		"./content/portfolio/activity_recognition/report.pdf" : "./assets/pdf/report_actvt.pdf",
-		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf"
+		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf",
 	});
 
 	eleventyConfig.addCollection("projects", function(collections) {
