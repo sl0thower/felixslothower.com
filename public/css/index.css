@@ -93,6 +93,11 @@
 		padding-top: 0px;
 		text-decoration: none;
 	}
+
+	div .main-wrapper {
+		margin: 2px;
+		padding: 10px;
+	}
   }
 
 /* CSS Defaults */
