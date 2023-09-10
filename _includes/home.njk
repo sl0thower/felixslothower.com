@@ -1,1 +1,26 @@
-{{content | safe}}
+---
+layout: base.njk
+---
+
+{% set css %}
+    {% include "public/css/home.css" %}
+{% endset %}
+
+<style>
+    {{css|safe}}
+</style>
+
+<div class="root1">
+    <div class="root2">
+        <div class="root3">
+            <div class="center-box">
+                {{content | safe}}
+            </div>
+        </div>
+    </div>
+    <div class="signature">
+        <img src="/assets/icons/blueglass_icon.svg" alt="blueglass-logo">
+        <p>Designed and built by Felix Slothower</p>
+    </div>
+</div>
+

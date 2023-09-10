@@ -1,6 +1,14 @@
 ---
 layout: base.njk
 ---
+{% set css %}
+	{% include "public/css/portfolio.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
 <div class="BG_container">
 	<div class="bg_container">
 		<div class="left_bar_placeholder">		

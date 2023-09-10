@@ -154,7 +154,11 @@ p,strong,em {
     background: none;
     font-size: 1.25rem;
 	color:#e2e2e2;
-	line-height: 130%
+	line-height: 130%;
+}
+
+p {
+	font-family: 'source_sans_proregular';
 }
 
 sup {

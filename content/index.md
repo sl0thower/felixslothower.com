@@ -1,11 +1,15 @@
 ---
-layout: "portfolio-landing-page.njk"
+layout: 'home.njk'
 ---
 
-{% image "./norway.jpg", "nice picture from norway" %}
+## [Portfolio](/portfolio/index.html)
+## [Images](/images/index.html)
+## [Art](/art/index.html)
 
-Welcome to my portfolio website! A place for sharing some of the bigger projects I have worked on as well as some more info about myself. 
+Trying to learn danish. My name is felix slothower and I have spent far too much time just aligning the elements on this page.
 
-I now hold a MSc. in Machine Learning, Systems and Control from Lunds Tekniska Högskolan and a BSc. in Mechanical Engineering from the University of California - Irvine. My technical skills span these two fields and I also have lots of experience working with tools and building things from scratch; bikes, tables, lighting and [this website](../../portfolio/this_website/index.html), to name a few. 
+I'm too young to know what the internet used to be. Times Person of the Year in 2006 was **you**. It was a picture of a computer and the screen had a mirror finish so that you saw a reflection of yourself on the magazine cover. I wasn't reading Times magazine back then but I learned about it through one of geohot's livestreams.
 
-[^none]:I took this picture just outside of Tromsø, Norway in the winter months. The sun doesn't make it above the fjords during this time and makes for some really nice lighting [^none].
+Maybe my development of this website is trying to connect with whatever the internet was like way back then. Kinda like this guys [website](http://www.verostko.com/menu.html) I recently found.
+
+/images and /art don't link to anything yet and that is ok.
