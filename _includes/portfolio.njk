@@ -27,17 +27,17 @@ layout: base.njk
 					{# <script type="importmap">
 						{
 							"imports": {
-								"three": "./node_modules/three/build/three.module.js"
+								"three": "./js/three/build/three.module.js"
 							}
 						}
-					</script>
-					<script type="module" src="./src/portfolio/sobel.js"></script> #}
+					</script> #}
+					<script type="module" src="./js/sobel.js"></script>
 				</div>
 
 				<div class="menu">
 					<ul>
 					{% for page in collections.projects %}
-					<li class="{{page.data.id}}">
+					<li class="{{ page.data.id }}">
 						<a href="{{ page.url }}">{% if page.data.title %}{{ page.data.title }}{% else %}<code>{{ page.url }}</code>{% endif %}</a>
 					</li>
 					{% endfor %}

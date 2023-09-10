@@ -4,6 +4,7 @@
 
 ## to-do
 - [x] Host using netlify and port to 11ty SSG framework
-- [ ] Expand to include a blog and photo library
-- [ ] Make portfolio compatible with mobile devices
+- [x] Make portfolio compatible with mobile devices
+- [ ] re-include the wireframe animation *(solved statically, needs refinement)*
 - [ ] Add a light/dark mode toggle (taking inspiration from [Nolan's](https://www.nolanbonnie.com/) website.)
+- [ ] Expand to include a blog and photo library...

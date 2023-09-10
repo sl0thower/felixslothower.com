@@ -1,5 +1,6 @@
 ---
 title: Activity Recognition
+tags: portfolio
 id: activity_recognition
 order: 4
 ---

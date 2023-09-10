@@ -29,17 +29,15 @@ module.exports = function(eleventyConfig) {
 		"./favicon.ico" : "./favicon.ico",
 		"./content/portfolio/activity_recognition/report.pdf" : "./assets/pdf/report_actvt.pdf",
 		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf",
+		"./node_modules/three" : "./js/three",
 	});
 
 	eleventyConfig.addCollection("projects", function(collections) {
-		return collections.getFilteredByTag("pages").sort(function(a, b) {
+		return collections.getFilteredByTag("portfolio").sort(function(a, b) {
 		  return a.data.order - b.data.order;
 		});
 	  });
 
-	// Run Eleventy when these files change:
-	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
-	
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 	
@@ -53,7 +51,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
-	// eleventyConfig.addPlugin(pluginDrafts);
 	
 	eleventyConfig.setLibrary("md", markdownIt(options));
 	

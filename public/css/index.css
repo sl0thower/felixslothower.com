@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'source_sans_probold';
-    src: url('/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
-         url('/fonts/sourcesanspro-bold-webfont.woff') format('woff');
+    src: url('/assets/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/sourcesanspro-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'source_sans_problack_italic';
-    src: url('/fonts/sourcesanspro-blackitalic-webfont.woff2') format('woff2'),
-         url('/fonts/sourcesanspro-blackitalic-webfont.woff') format('woff');
+    src: url('/assets/fonts/sourcesanspro-blackitalic-webfont.woff2') format('woff2'),
+         url('/assets/fonts/sourcesanspro-blackitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'source_sans_proitalic';
-    src: url('/fonts/sourcesanspro-italic-webfont.woff2') format('woff2'),
-         url('/fonts/sourcesanspro-italic-webfont.woff') format('woff');
+    src: url('/assets/fonts/sourcesanspro-italic-webfont.woff2') format('woff2'),
+         url('/assets/fonts/sourcesanspro-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'source_sans_proregular';
-    src: url('/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
-         url('/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    src: url('/assets/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/sourcesanspro-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

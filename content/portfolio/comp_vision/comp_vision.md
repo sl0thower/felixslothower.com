@@ -1,5 +1,6 @@
 ---
 title: Computer Vision
+tags: portfolio
 id: computer_vision
 order: 3
 ---

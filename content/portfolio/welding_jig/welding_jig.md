@@ -1,5 +1,6 @@
 ---
 title: Welding Jig
+tags: portfolio
 id: welding_jig
 order: 2
 ---

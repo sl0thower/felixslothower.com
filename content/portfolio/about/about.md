@@ -1,5 +1,6 @@
 ---
 title: About me...
+tags: portfolio
 id: about_me
 order: 6
 ---
