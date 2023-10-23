@@ -11,4 +11,4 @@ hello world
 
 and here is a picture.
 
-{% image "./IMG_0024.jpg", "photo of myself" %} 
+{% image "./IMG_0024.JPG", "photo of myself" %} 
