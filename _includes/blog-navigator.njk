@@ -27,7 +27,7 @@ pagination:
                     <h1>
                     <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
                     </h1>
-                    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                    <time datetime="{{ blog.date | dateIso }}">{{ blog.date | dateReadable }}</time>
                 </article>
                 {% endfor %}
             </div>
