@@ -1,0 +1,37 @@
+---
+layout: base.njk
+pagination:
+    data: collections.blog
+    reverse: true
+    alias: blogs
+    size: 20
+---
+{% set css %}
+	{% include "public/css/blog-navigator.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
+<div class="master-container">
+    <div class="left-empty"></div>    
+    <div class="center-container">
+        
+        <div class="header-white-space"></div>
+        <div class="main-content">
+            <div class="markdown-content">{{content | safe}}</div>
+            <div class="blog-list">
+                {% for blog in blogs %}
+                <article>
+                    <h1>
+                    <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
+                    </h1>
+                    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="right-empty"></div>
+</div>

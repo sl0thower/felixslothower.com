@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+{% set css %}
+	{% include "public/css/blog-page.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
+{{content | safe}}

@@ -11,6 +11,8 @@ const markdownItFootnote = require("markdown-it-footnote");
 // };
 
 // const mdLib = markdownIt().use(mdfigcaption, figoptions);
+const moment = require('moment');
+moment.locale('en');
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -99,6 +101,15 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+	});
+
+	// Format dates to look nicer
+	eleventyConfig.addFilter('dateIso', date => {
+		return moment(date).toISOString();
+	  });
+	 
+	eleventyConfig.addFilter('dateReadable', date => {
+		return moment(date).utc().format('LL'); // E.g. May 31, 2019
 	});
 
 	// Customize Markdown library settings:

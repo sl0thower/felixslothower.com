@@ -1,5 +1,5 @@
 ---
-layout: "portfolio-landing-page.njk"
+layout: "portfolio-page.njk"
 ---
 
 {% image "./norway.jpg", "nice picture from norway" %}

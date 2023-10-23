@@ -1,0 +1,40 @@
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+    font-size: medium;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+time {
+    color: #7d7d7d;
+    font-style: italic;
+    font-size: small;
+    font-family: 'Lucida Console';
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.master-container {
+    display: grid;
+    grid-template-columns: 10% 40em 1fr;
+}
+
+.center-container {
+    display: grid;
+    grid-template-rows: 100px fit-content(80%) 1fr;
+}
+
+.main-content {
+    background-color: #eccf3c;
+    border-radius: 0.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+

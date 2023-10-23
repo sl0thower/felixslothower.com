@@ -286,7 +286,7 @@ picture.img_row img {
 .left_bar {
 	position: fixed;
 	display: grid;
-	grid-template-rows: 60px 60px 280px 1fr 45px;
+	grid-template-rows: 60px 60px 280px 1fr 110px;
 	color: #c8ccc7;
 	font-family: 'source_sans_probold';
 	margin-right: 5px;
@@ -396,12 +396,16 @@ picture.img_row img {
 
 .signature {
 	flex:auto;
-	padding-bottom: 1.5em;
 	width: 100%;
 	color:gray;
 	text-align: center;
 	font-family: "source_sans_proitalic";
 	font-size:medium;
+}
+
+.signature img {
+	width: 15%;
+	padding-top: 13px;
 }
 
 .main {

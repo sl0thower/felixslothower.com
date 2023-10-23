@@ -13,3 +13,5 @@ I'm too young to know what the internet used to be. Times Person of the Year in 
 Maybe my development of this website is trying to connect with whatever the internet was like way back then. Kinda like this guys [website](http://www.verostko.com/menu.html) I recently found.
 
 /images and /art don't link to anything yet and that is ok.
+
+You can find my blog posts, if any, at this <a href="/blog/index.html">link</a>

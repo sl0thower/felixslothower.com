@@ -22,13 +22,13 @@
 .center-box {
     flex-shrink: 1;
     background-color: #D6d19b;
-    border-radius: 5px;
+    border-radius: 0.5em;
     max-width: 400px;
     padding-left: 10px; padding-right: 10px;
 }
 
 .signature {
-    flex-basis: 100px
+    flex-basis: 100px;
     justify-self: flex-end;
     display: flex;
     flex-flow: column;
