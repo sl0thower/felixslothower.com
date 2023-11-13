@@ -9,4 +9,12 @@ layout: base.njk
 	{{css|safe}}
 </style>
 
+<div class="back">
+	<div class="back-text"><a href="../index.html">back</a></div>
+</div>
+
 {{content | safe}}
+
+<div class="page-metadata">
+	Modified:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
+</div>

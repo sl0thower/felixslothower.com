@@ -61,3 +61,11 @@ a {
 a.header-anchor {
     display: none;
 }
+
+.blog-link {
+    background-color: lightgreen;
+}
+
+.blog-link:active {
+    background-color: darkgreen;
+}

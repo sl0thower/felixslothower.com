@@ -6,12 +6,6 @@ layout: 'home.njk'
 ## [Images](/images/index.html)
 ## [Art](/art/index.html)
 
-Trying to learn danish. My name is felix slothower and I have spent far too much time just aligning the elements on this page.
+This website is a work in progress. Still not sure what I want out of this. But so far I am enjoying editing the css and the various pages. Sometimes the static'ness of eleventy bothers me. I want to have some client side 3d animations for example and I'm having a hard time navigating the necessary steps to make that work.
 
-I'm too young to know what the internet used to be. Times Person of the Year in 2006 was **you**. It was a picture of a computer and the screen had a mirror finish so that you saw a reflection of yourself on the magazine cover. I wasn't reading Times magazine back then but I learned about it through one of geohot's livestreams.
-
-Maybe my development of this website is trying to connect with whatever the internet was like way back then. Kinda like this guys [website](http://www.verostko.com/menu.html) I recently found.
-
-/images and /art don't link to anything yet and that is ok.
-
-You can find my blog posts, if any, at this <a href="/blog/index.html">link</a>
+You can find my blog posts, if any, at this <a class="blog-link" href="/blog/index.html">blog link</a>

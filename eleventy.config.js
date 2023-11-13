@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+// const markdownItAnchor = require("markdown-it-anchor");
 const markdownItFootnote = require("markdown-it-footnote");
 // const mardownItImpFig = require("markdown-it-implicit-figures")
 
@@ -17,7 +17,7 @@ moment.locale('en');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const pluginNavigation = require("@11ty/eleventy-navigation");
+// const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
@@ -45,11 +45,11 @@ module.exports = function(eleventyConfig) {
 	
 	let options = {
 		html: true,
-		breaks: true
+		breaks: false,
 	};
 	
 	// App plugins
-	eleventyConfig.addPlugin(pluginNavigation);
+	// eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
@@ -71,18 +71,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-	});
-
-	// Get the first `n` elements of a collection.
-	eleventyConfig.addFilter("head", (array, n) => {
-		if(!Array.isArray(array) || array.length === 0) {
-			return [];
-		}
-		if( n < 0 ) {
-			return array.slice(n);
-		}
-
-		return array.slice(0, n);
 	});
 
 	// Return the smallest number argument
@@ -114,16 +102,16 @@ module.exports = function(eleventyConfig) {
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
-		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
-				class: "header-anchor",
-				symbol: "#",
-				ariaHidden: false,
-			}),
-			level: [1,2,3,4],
-			slugify: eleventyConfig.getFilter("slugify")
-		});
+		// mdLib.use(markdownItAnchor, {
+		// 	permalink: markdownItAnchor.permalink.ariaHidden({
+		// 		placement: "after",
+		// 		class: "header-anchor",
+		// 		symbol: "#",
+		// 		ariaHidden: false,
+		// 	}),
+		// 	level: [1,2,3,4],
+		// 	slugify: eleventyConfig.getFilter("slugify")
+		// });
 		mdLib.use(markdownItFootnote)
 	});
 

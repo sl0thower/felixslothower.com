@@ -1,3 +1,17 @@
 picture img {
     width: 300px;
 }
+
+body {
+    max-width: 40em;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-text {
+    background-color: yellow;
+}

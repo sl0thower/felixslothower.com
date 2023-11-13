@@ -20,6 +20,11 @@ time {
     padding-right: 5px;
 }
 
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(213,235,162,1) 70%, rgba(155,208,31,1) 100%);
+}
+
 .master-container {
     display: grid;
     grid-template-columns: 10% 40em 1fr;
