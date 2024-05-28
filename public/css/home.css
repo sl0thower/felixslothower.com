@@ -63,7 +63,8 @@ a.header-anchor {
 }
 
 .blog-link {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
+    font-style: oblique;
 }
 
 .blog-link:active {
