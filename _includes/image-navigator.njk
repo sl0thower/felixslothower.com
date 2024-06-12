@@ -1,0 +1,29 @@
+---
+layout: base.njk
+pagination:
+    data: collections.image
+    alias: images
+    size: 20
+---
+
+{% set css %}
+	{% include "public/css/home.css" %}
+	{# {% include "public/css/blog-navigator.css" %} #}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
+<div class='main-bucket'>
+    {{content | safe}}
+    <div class="list-container">
+        {% for image in images %}
+            <article>
+                <h1>
+                <a href="{{ image.url | url }}">{{ image.data.title }}</a>
+                </h1>
+            </article>
+        {% endfor %}
+    </div>
+</div>

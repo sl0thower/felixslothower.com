@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+date: git Last Modified
 ---
 
 {% set css %}
@@ -17,10 +18,11 @@ layout: base.njk
                 {{content | safe}}
             </div>
         </div>
-    </div>
-    <div class="signature">
-        <img src="/assets/icons/blueglass_icon.svg" alt="blueglass-logo">
-        <p>Designed and built by Felix Slothower</p>
+        <div class="signature">
+            <img src="/assets/icons/blueglass_icon.svg" alt="blueglass-logo">
+            <p>Designed and built by Felix Slothower</p>
+            <p class='year'>2020-{{page.date.getYear() + 1900}}</p>
+        </div>
     </div>
 </div>
 

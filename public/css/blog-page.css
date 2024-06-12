@@ -4,14 +4,26 @@ picture img {
 
 body {
     max-width: 40em;
+    margin: auto;
+    font-family: "RomanSerif";
+}
+
+picture {
+    align-self: center;
+}
+
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .back {
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-.back-text {
-    background-color: yellow;
+.content {
+    display: flex;
+    flex-direction: column;
 }

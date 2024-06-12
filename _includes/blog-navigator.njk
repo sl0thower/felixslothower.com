@@ -7,6 +7,7 @@ pagination:
     size: 20
 ---
 {% set css %}
+    {% include "public/css/home.css" %}
 	{% include "public/css/blog-navigator.css" %}
 {% endset %}
 
@@ -23,12 +24,13 @@ pagination:
             <div class="markdown-content">{{content | safe}}</div>
             <div class="blog-list">
                 {% for blog in blogs %}
-                <article>
-                    <h1>
-                    <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
-                    </h1>
-                    <time datetime="{{ blog.date | dateIso }}">{{ blog.date | dateReadable }}</time>
-                </article>
+                    <a class="list-link" href="{{ blog.url | url }}">
+                        <article class = "list-article">
+                            <h1>{{ blog.data.title }}</h1>
+                            <div class="blog-list-connectorLine"><hr></div>
+                            <time datetime="{{ blog.date | dateIso }}">{{ blog.date | dateReadable }}</time>
+                        </article>
+                    </a>
                 {% endfor %}
             </div>
         </div>

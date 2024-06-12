@@ -68,7 +68,13 @@ layout: base.njk
 		
 		<div class="main-wrapper">
 			<div class="main">
-				{{content|safe}}
+				{{content | safe}}
+
+				<hr class="footnotes-sep">
+
+				<div class="page-metadata">
+					Modified:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
+				</div>
 			</div>  
 		</div>
 		<div class="mobile-signature">

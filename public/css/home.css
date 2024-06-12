@@ -1,13 +1,21 @@
+@font-face {
+    font-family: 'RomanSerif';
+    src: url('/assets/fonts/RomanSerif.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .root1 {
     display: flex;
     flex-flow: column;
     justify-content: center;
     min-height: 98vh;
+    font-family: 'RomanSerif';    
 }
 
 .root2 {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: center;
     align-content: center;
     flex-grow: 1;
@@ -15,43 +23,51 @@
 
 .root3 {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row;
     justify-content: center;
+    /* flex-grow: 1; */
 }
 
 .center-box {
     flex-shrink: 1;
-    background-color: #D6d19b;
+    background-color: #90c0ff;
     border-radius: 0.5em;
     max-width: 400px;
-    padding-left: 10px; padding-right: 10px;
+    padding-left: 15px; padding-right: 15px;
 }
 
 .signature {
     flex-basis: 100px;
-    justify-self: flex-end;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    width: 95vw;
     background: none;
-    padding: 20px;
+    margin: 5px;
+    color: gray;
 }
 
 .signature img {
     width: 40px;
     order: 2;
+    margin: 9px;
 }
 
 .signature p {
     padding-left: 15px; padding-right: 15px;
     font-style: italic;
+    margin: 2px;
 }
 
-h1, h2, h3 {
-    text-align: center;
+h1 {
+    font-size: 2em;
+    margin-block: 5px;
+}
+
+h2, h3 {
+    text-align: left;
+    font-size: medium;
 }
 
 a {
