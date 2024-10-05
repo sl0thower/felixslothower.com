@@ -1,7 +1,7 @@
 ---
 title: Computer Vision
 tags: portfolio
-id: computer_vision
+id: vision
 order: 3
 ---
 *Improving the semantic segmentation of fisheye distorted images while maintaining a wide field of view*

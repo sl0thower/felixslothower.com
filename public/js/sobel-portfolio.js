@@ -3,27 +3,48 @@ import * as THREE from 'three';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-import { LuminosityShader } from 'three/examples/jsm/shaders/LuminosityShader.js';
+// import { LuminosityShader } from 'three/examples/jsm/shaders/LuminosityShader.js';
 import { SobelOperatorShader } from 'three/examples/jsm/shaders/SobelOperatorShader.js';
 
-// import { STLLoader } from './three/examples/jsm/loaders/STLLoader.js';
+import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 
 // specify the directory path you want to list the files of
 
 let camera, scene, renderer, composer, pivot;
 let effectSobel;
 
+const targets = {
+	additive:      1,
+	welding:       2,
+	vision:		   3,
+	activity:      4,
+	this_website:  5,
+	about:         6
+};
+
+const files = [
+	'../../assets/models/headtube.stl',
+	'../../assets/models/welding_jig.stl',
+	'../../assets/models/world.stl',
+	'../../assets/models/apple_watch.stl',
+	'../../assets/models/world.stl',
+	'../../assets/models/two_plus_candle.stl',
+]
+
 const clock = new THREE.Clock();
+var currentMesh = targets[document.getElementById('sobel-metadata').textContent];
+console.log(document.getElementById('sobel-metadata').textContent)
+console.log(currentMesh)
 var isRotating = true;
 var switched = false;
 
-init();
+init(targets);
 animate();
 
 function init() {
 
 	renderer = new THREE.WebGLRenderer();
-    var container = document.getElementById('my-canvas');
+    var container = document.getElementById('portfolio-canvas');
     var w = container.offsetWidth;
     var h = container.offsetHeight;
     renderer.setSize(w, h);
@@ -34,18 +55,28 @@ function init() {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera( 70, w/h, 0.1, 1000 );
-	camera.position.set( 0, 0, 10 );
+	camera.position.set( 0, 0, 12 );
 	camera.lookAt( scene.position );
 
 	// load the models
 
 	pivot = new THREE.Group();
-	const material = new THREE.MeshPhongMaterial( { color: 0xffff00 } );	
-	const geometry = new THREE.TorusKnotGeometry( 7, 3, 300, 32, 1, 3 );
-	const mesh = new THREE.Mesh( geometry, material );
-	pivot.add( mesh )
+	const material = new THREE.MeshPhongMaterial( { color: 0xffff00 } );
+
+	const loader = new STLLoader();
+	for ( let k = 0; k < Object.keys(targets).length; k ++ ) {
+		loader.load(files[k], function ( geometry ) {
+				const mesh = new THREE.Mesh( geometry, material );
+				mesh.layers.set( k + 1 );
+				mesh.name = Object.keys(targets)[k];
+				mesh.scale.set(0.5,0.5,0.5);
+				pivot.add( mesh );
+		});
+		addMeshListeners(Object.keys(targets)[k], k+1);
+	}
+
 	scene.add( pivot )
-	
+
 	// scene lighting
 
 	const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
@@ -76,11 +107,22 @@ function init() {
 
 	// mouse events
 	
-	const buttonSobel = document.getElementById('my-canvas');
+	const buttonSobel = document.getElementById('portfolio-canvas');
 	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
+	
+	camera.layers.enable(currentMesh);
+}
 
-	camera.layers.enable(1);
+function addMeshListeners(buttonId, targetMesh) {
+	const button = document.getElementById(buttonId);
+	button.addEventListener('mouseover', function() {switchMesh(targetMesh); animate();});
+	button.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate();});
+}
 
+function switchMesh(target) {
+	camera.layers.disableAll();
+	camera.layers.enable(0);
+	camera.layers.enable(target);
 }
 
 function onWindowResize() {

@@ -6,3 +6,4 @@ package-lock.json
 *.blend
 *.blend1
 cache/
+.11ty-vite

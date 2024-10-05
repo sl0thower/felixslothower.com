@@ -14,6 +14,7 @@ const markdownItFootnote = require("markdown-it-footnote");
 const moment = require('moment');
 moment.locale('en');
 
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
@@ -30,16 +31,16 @@ module.exports = function(eleventyConfig) {
 		"./public/" : "/",
 		"./favicon.ico" : "./favicon.ico",
 		"./content/portfolio/activity_recognition/report.pdf" : "./assets/pdf/report_actvt.pdf",
-		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf",
-		"./node_modules/three" : "./js/three",
+		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf"
 	});
 
+	
 	eleventyConfig.addCollection("projects", function(collections) {
 		return collections.getFilteredByTag("portfolio").sort(function(a, b) {
-		  return a.data.order - b.data.order;
+			return a.data.order - b.data.order;
 		});
-	  });
-
+	});
+	
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 	
@@ -53,6 +54,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
+	eleventyConfig.addPlugin(EleventyVitePlugin);
 	
 	eleventyConfig.setLibrary("md", markdownIt(options));
 	

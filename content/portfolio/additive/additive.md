@@ -1,7 +1,7 @@
 ---
 title: Additive Bicycle
 tags: portfolio
-id: additive_bicycle
+id: additive
 order: 1
 ---
 

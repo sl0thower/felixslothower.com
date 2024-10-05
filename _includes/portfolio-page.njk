@@ -13,8 +13,8 @@ layout: base.njk
 	<div class="bg_container">
 		<div class="left_bar_placeholder">		
 			<div class="left_bar">
-				<div class="fullname"><a href="/portfolio/index.html">Felix S.</a></div>
-				<div class="details "style="white-space:nowrap">
+				<div class="fullname"><a href="/portfolio/welcome/">Felix S.</a></div>
+				<div class="details" style="white-space:nowrap">
 					<div class="email"> 
 						<p>email.</p>
 						<p>felixslothower@gmail.com</p>
@@ -27,11 +27,11 @@ layout: base.njk
 							<img src="/assets/icons/github.svg" alt="github-icon">
 						</a>
 						<a href="/assets/pdf/resume.pdf" class="icon-cv" target="_blank">
-							<img src="/assets/icons/cv.svg" alt="cv-icon">
+							<img  src="/assets/icons/cv.svg"  alt="cv-icon">
 						</a>
 					</div>
 				</div>
-				<div class="sobel"> 
+				<div id="portfolio-canvas"> 
 					{# <script type="importmap">
 						{
 							"imports": {
@@ -39,14 +39,14 @@ layout: base.njk
 							}
 						}
 					</script> #}
-					<script type="module" src="./js/sobel.js"></script>
+					<script type="module" src="../../js/sobel-portfolio.js"></script>
 				</div>
 
 				<div class="menu">
 					<ul>
 					{% for page in collections.projects %}
-					<li class="{{ page.data.id }}">
-						<a href="{{ page.url }}">{% if page.data.title %}{{ page.data.title }}{% else %}<code>{{ page.url }}</code>{% endif %}</a>
+					<li>
+						<a id="{{page.data.id}}" href="{{ page.url }}">{% if page.data.title %}{{ page.data.title }}{% endif %}</a>
 					</li>
 					{% endfor %}
 					</ul>
@@ -77,6 +77,7 @@ layout: base.njk
 				<div class="page-metadata">
 					Modified:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
 				</div>
+				<div class="hidden" id="sobel-metadata">{{page.fileSlug}}</div>
 			</div>  
 		</div>
 		<div class="mobile-signature">

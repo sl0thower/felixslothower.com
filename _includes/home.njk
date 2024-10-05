@@ -11,17 +11,16 @@ date: git Last Modified
     {{css|safe}}
 </style>
 
-<div class="root1">
-    <div class="root2">
-        <div class="root3">
-            <div class="center-box">
-                {{content | safe}}
-            </div>
+<script type="module" src="/js/sobel.js"></script>
+<div id="my-canvas">
+    <div id="my-column">
+        <div id="center-box" tabindex="0">
+            {{content | safe}}
         </div>
-        <div class="signature">
-            <img src="/assets/icons/blueglass_icon.svg" alt="blueglass-logo">
+        <div id="signature">
             <p>Designed and built by Felix Slothower</p>
             <p class='year'>2020-{{page.date.getYear() + 1900}}</p>
+            <img src="/assets/icons/blueglass_icon_w.svg" alt="blueglass-logo">
         </div>
     </div>
 </div>

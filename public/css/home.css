@@ -5,56 +5,49 @@
     font-style: normal;
 }
 
-.root1 {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    min-height: 98vh;
-    font-family: 'RomanSerif';    
+#my-canvas {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
 }
 
-.root2 {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-content: center;
-    flex-grow: 1;
+#my-column {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 100%;
+    /* grid-column: ; */
+    top: 50%;
+    margin-top: -160px;
+    left: 50%;
+    margin-left: -215px;
+    font-family: 'RomanSerif';      
 }
 
-.root3 {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    /* flex-grow: 1; */
-}
-
-.center-box {
-    flex-shrink: 1;
+#center-box {
     background-color: #90c0ff;
     border-radius: 0.5em;
     max-width: 400px;
     padding-left: 15px; padding-right: 15px;
 }
 
-.signature {
-    flex-basis: 100px;
+#signature {
+    flex-basis: 400px;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    bottom: 0;
-    background: none;
-    margin: 5px;
-    color: gray;
+    color: lightgray;
 }
 
-.signature img {
+#signature img {
     width: 40px;
     order: 2;
     margin: 9px;
 }
 
-.signature p {
+#signature p {
     padding-left: 15px; padding-right: 15px;
     font-style: italic;
     margin: 2px;

@@ -487,3 +487,7 @@ box-decoration-break: clone;
 padding: .05rem .3rem .05rem;
 border-radius: .2rem;
 }
+
+.hidden {
+	display: none;
+}
