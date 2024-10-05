@@ -4,6 +4,9 @@ tags: portfolio
 id: vision
 order: 3
 ---
+
+# Computer Vision
+
 *Improving the semantic segmentation of fisheye distorted images while maintaining a wide field of view*
 
 For my master's thesis at LTH I worked with Axis Communications AB to explore the use of fisheye cameras for computer vision. Fisheye cameras are characterized by their wide field of view, typically near or above 180 degrees. Such a large field of view results in heavy image distortion, as can be seen in the below picture. This distortion is effectively compressing information about the environment at varying amounts across the image. Objects at the center appear relatively undistorted while objects at the periphery are more heavily distorted. In turn, this *variable compression* of information is not handled well by traditional computer vision models such as YOLOv5 or any convolutional neural network (CNN) based architecture for that matter. This is because the convolution operation is applied equally to all pixels across the image, even though pixels at the far periphery might be more information dense than pixels near the center. 

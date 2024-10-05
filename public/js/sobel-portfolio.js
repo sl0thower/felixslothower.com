@@ -19,7 +19,8 @@ const targets = {
 	vision:		   3,
 	activity:      4,
 	this_website:  5,
-	about:         6
+	about:         6,
+	welcome:	   7
 };
 
 const files = [
@@ -29,16 +30,16 @@ const files = [
 	'../../assets/models/apple_watch.stl',
 	'../../assets/models/world.stl',
 	'../../assets/models/two_plus_candle.stl',
+	'../../assets/models/cube_twist.stl',
 ]
 
 const clock = new THREE.Clock();
-var currentMesh = targets[document.getElementById('sobel-metadata').textContent];
-console.log(document.getElementById('sobel-metadata').textContent)
-console.log(currentMesh)
+var currentLayer = targets.welcome;
 var isRotating = true;
 var switched = false;
 
 init(targets);
+loadpage(currentLayer);
 animate();
 
 function init() {
@@ -67,7 +68,7 @@ function init() {
 	for ( let k = 0; k < Object.keys(targets).length; k ++ ) {
 		loader.load(files[k], function ( geometry ) {
 				const mesh = new THREE.Mesh( geometry, material );
-				mesh.layers.set( k + 1 );
+				mesh.layers.set( k+1 );
 				mesh.name = Object.keys(targets)[k];
 				mesh.scale.set(0.5,0.5,0.5);
 				pivot.add( mesh );
@@ -103,20 +104,38 @@ function init() {
 	composer.addPass( effectSobel );
 
 	// Removed resize function since the div should not be changing size
-	window.addEventListener( 'resize', onWindowResize );
+	// window.addEventListener( 'resize', onWindowResize );
 
 	// mouse events
 	
 	const buttonSobel = document.getElementById('portfolio-canvas');
 	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
 	
-	camera.layers.enable(currentMesh);
+	camera.layers.enable(currentLayer);
 }
 
-function addMeshListeners(buttonId, targetMesh) {
+function addMeshListeners(buttonId, targetLayer) {
 	const button = document.getElementById(buttonId);
-	button.addEventListener('mouseover', function() {switchMesh(targetMesh); animate();});
-	button.addEventListener('mouseleave', function() {switchMesh(currentMesh); animate();});
+	button.addEventListener('mouseover', function() {switchMesh(targetLayer); animate();});
+	button.addEventListener('mouseleave', function() {switchMesh(currentLayer); animate();});
+	button.addEventListener('mousedown', function() {currentLayer = targetLayer; loadpage(targets[buttonId]); animate();})
+}
+
+function loadpage(target) {
+	const folder = Object.keys(targets)[target-1];
+	console.log(target)
+	console.log(folder)
+	fetch('/portfolio/'+folder+'/index.html').then(function (response) {
+		if (response.ok) {
+			return response.text();
+		}
+		throw response;
+	}).then(function (text) {
+		const content = document.getElementById('project-text')
+		content.innerHTML = text;
+	}).catch(error => {
+        console.error('Error fetching the HTML file:', error);
+    });
 }
 
 function switchMesh(target) {
@@ -143,7 +162,7 @@ function animate() {
 		switched = true;
 	};
 	var timeDelta = clock.getDelta();
-	timeDelta *= 0.05;
+	timeDelta *= 0.5;
 	pivot.rotateY(timeDelta);
 	composer.render();
 	requestAnimationFrame( animate );

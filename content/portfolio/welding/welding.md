@@ -5,6 +5,8 @@ id: welding
 order: 2
 ---
 
+# Welding Jig
+
 *Designed and built a welding jig for the UCI Frame Building club*
 
 ### Background

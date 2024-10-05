@@ -13,7 +13,7 @@ layout: base.njk
 	<div class="bg_container">
 		<div class="left_bar_placeholder">		
 			<div class="left_bar">
-				<div class="fullname"><a href="/portfolio/welcome/">Felix S.</a></div>
+				<div class="fullname"><a id="welcome">Felix S.</a></div>
 				<div class="details" style="white-space:nowrap">
 					<div class="email"> 
 						<p>email.</p>
@@ -32,13 +32,6 @@ layout: base.njk
 					</div>
 				</div>
 				<div id="portfolio-canvas"> 
-					{# <script type="importmap">
-						{
-							"imports": {
-								"three": "./js/three/build/three.module.js"
-							}
-						}
-					</script> #}
 					<script type="module" src="../../js/sobel-portfolio.js"></script>
 				</div>
 
@@ -46,17 +39,12 @@ layout: base.njk
 					<ul>
 					{% for page in collections.projects %}
 					<li>
-						<a id="{{page.data.id}}" href="{{ page.url }}">{% if page.data.title %}{{ page.data.title }}{% endif %}</a>
+						<a id="{{page.data.id}}">{% if page.data.title %}{{ page.data.title }}{% endif %}</a>
 					</li>
 					{% endfor %}
 					</ul>
 				</div>
-				{# <div class="moreLinks">
-					<ul>
-						<li id="home">Home</li>
-						<li id="links">Links</li>
-					</ul>
-				</div> #}
+
 				<div class="signature">
 					Designed and built by Felix Slothower
 					<a href="../../index.html">
@@ -68,16 +56,11 @@ layout: base.njk
 		
 		<div class="main-wrapper">
 			<div class="main">
-				<h1>{{ title }}</h1>
-
-				{{content | safe}}
-
+				<div id="project-text"></div>
 				<hr class="footnotes-sep">
-
 				<div class="page-metadata">
 					Modified:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
 				</div>
-				<div class="hidden" id="sobel-metadata">{{page.fileSlug}}</div>
 			</div>  
 		</div>
 		<div class="mobile-signature">

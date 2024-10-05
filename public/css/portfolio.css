@@ -346,52 +346,33 @@ picture.img_row img {
 
 .menu ul {
 	background-color: black;	
-	color: #c8ccc7;
-	padding: 0;
-	font-family: 'source_sans_probold';
-	font-size:xx-large;
 	list-style: none;
 }
 
 .menu li {
 	display: flex;
 	justify-content: right;
+	width: 100%;
 }
 
 .menu li a {
 	padding-top: 2px;
 	text-decoration: none;
+	color: #c8ccc7;
+	padding: 0;
+	font-family: 'source_sans_probold';
+	font-size: xx-large;
 }
 
 .menu li a:hover {
-	font-family: "source_sans_problack_italic";
+	/* font-family: "source_sans_problack_italic"; */
 	/* text-indent: 10px; */
+	color: #ffea29;
 }
 
 .moreLinks {
 	flex:auto;
 	padding: 0.5em;
-}
-
-.moreLinks ul {
-	width: 100%;
-	background-color: black;	
-	color: #c8ccc7;
-	padding: 0;
-	padding-top: 1em;
-	margin: 0;
-	font-family: 'source_sans_proregular';
-	list-style: none;
-	font-size: large;
-}
-
-.moreLinks li {
-	padding: 0.1em;
-}
-
-.moreLinks li:hover {
-	font-family: 'source_sans_proitalic';
-	color:#ffea29;
 }
 
 .signature {
@@ -410,7 +391,7 @@ picture.img_row img {
 
 .main {
 	background: none;
-	height: calc(100% + 30vh);
+	height: calc(100% + 34vh);
 }
 
 .main-wrapper {
@@ -488,6 +469,6 @@ padding: .05rem .3rem .05rem;
 border-radius: .2rem;
 }
 
-.hidden {
-	display: none;
+#project-text {
+	background: none;
 }

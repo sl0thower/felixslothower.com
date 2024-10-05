@@ -5,6 +5,8 @@ id: additive
 order: 1
 ---
 
+# Additive Bicycle
+
 *Design of an additively manufactured and weldless mountain bike.*
 
 ### Background

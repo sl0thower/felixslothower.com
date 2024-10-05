@@ -5,6 +5,8 @@ id: activity
 order: 4
 ---
 
+# Activity Recognition
+
 *Classification of activities using IMU data collected from a wristwatch and mobile phone.*
 
 ### Background
