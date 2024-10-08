@@ -59,6 +59,7 @@ module.exports = function(eleventyConfig) {
 				assetsInclude: ['**/*.stl'],
 				outDir: '_site', // Ensure Vite's output matches Eleventy's output
 			},
+			assetsInclude: ['**/*.stl'],
 		},
 	});
 
