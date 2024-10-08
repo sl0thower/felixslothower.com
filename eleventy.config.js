@@ -28,8 +28,7 @@ module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
-		"./public/" : "/",
-		"./favicon.ico" : "./favicon.ico",
+		"./public/" : "/public/",
 		"./content/portfolio/activity/report.pdf" : "./assets/pdf/report_actvt.pdf",
 		"./content/portfolio/vision/report.pdf" : "./assets/pdf/report_CV.pdf"
 	});
@@ -55,7 +54,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginImages);
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		viteOptions: {
-			outDir: '_11ty-vite', // Ensure Vite's output matches Eleventy's output
 			assetsInclude: ['**/*.stl'],
 		},
 	});
