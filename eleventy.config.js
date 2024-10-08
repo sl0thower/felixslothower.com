@@ -53,8 +53,16 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
-	eleventyConfig.addPlugin(EleventyVitePlugin);
-	
+	eleventyConfig.addPlugin(EleventyVitePlugin, {
+		viteOptions: {	
+			build: {
+				assetsInclude: ['**/*.stl'],
+				outDir: '_site', // Ensure Vite's output matches Eleventy's output
+			},
+		},
+	});
+
+	  
 	eleventyConfig.setLibrary("md", markdownIt(options));
 	
 	// Official plugins
