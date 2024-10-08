@@ -11,11 +11,18 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 		
-		
+	
 
 		{# <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> #}
 	</head>
-		<body>
+	{% set css %}
+    	{% include "public/css/base.css" %}
+	{% endset %}
+
+	<style>
+		{{css|safe}}
+	</style>
+		<body id="base">
 			{{content | safe}}
 		</body>
 </html>
