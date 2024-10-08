@@ -28,9 +28,11 @@ module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
-		"./public/" : "/public/",
-		"./content/portfolio/activity/report.pdf" : "./assets/pdf/report_actvt.pdf",
-		"./content/portfolio/vision/report.pdf" : "./assets/pdf/report_CV.pdf"
+		"./public/" : "./",
+		"./favicon.ico" : "./public/favicon.ico",
+		"./content/portfolio/activity/report.pdf" : "./public/assets/pdf/report_actvt.pdf",
+		"./content/portfolio/vision/report.pdf" : "./public/assets/pdf/report_CV.pdf",
+		"./public/assets/models/" : "./public/assets/models/",
 	});
 
 	eleventyConfig.addCollection("projects", function(collections) {

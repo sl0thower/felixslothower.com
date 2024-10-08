@@ -26,7 +26,7 @@ const targets = {
 const files = [
 	'../assets/models/headtube.stl',
 	'../assets/models/welding_jig.stl',
-	'../assets/models/world.stl',
+	'../assets/models/camera.stl',
 	'../assets/models/apple_watch.stl',
 	'../assets/models/world.stl',
 	'../assets/models/two_plus_candle.stl',
