@@ -30,8 +30,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({
 		"./public/" : "/",
 		"./favicon.ico" : "./favicon.ico",
-		"./content/portfolio/activity_recognition/report.pdf" : "./assets/pdf/report_actvt.pdf",
-		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf"
+		"./content/portfolio/activity/report.pdf" : "./assets/pdf/report_actvt.pdf",
+		"./content/portfolio/vision/report.pdf" : "./assets/pdf/report_CV.pdf"
 	});
 
 	eleventyConfig.addCollection("projects", function(collections) {
@@ -54,11 +54,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
-		viteOptions: {	
-			build: {
-				assetsInclude: ['**/*.stl'],
-				outDir: '_site', // Ensure Vite's output matches Eleventy's output
-			},
+		viteOptions: {
+			outDir: '_11ty-vite', // Ensure Vite's output matches Eleventy's output
 			assetsInclude: ['**/*.stl'],
 		},
 	});

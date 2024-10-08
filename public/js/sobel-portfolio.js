@@ -8,6 +8,13 @@ import { SobelOperatorShader } from 'three/examples/jsm/shaders/SobelOperatorSha
 
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 
+import headtube from '../assets/models/headtube.stl?url'
+import welding_jig from '../assets/models/welding_jig.stl?url'
+import world from '../assets/models/world.stl?url'
+import apple_watch from '../assets/models/apple_watch.stl?url'
+import two_plus_candle from '../assets/models/two_plus_candle.stl?url'
+import cube_twist from '../assets/models/cube_twist.stl?url'
+
 // specify the directory path you want to list the files of
 
 let camera, scene, renderer, composer, pivot;
@@ -23,14 +30,24 @@ const targets = {
 	welcome:	   7
 };
 
+// const files = [
+// 	'../assets/headtube.stl',
+// 	'../assets/welding_jig.stl',
+// 	'../assets/world.stl',
+// 	'../assets/apple_watch.stl',
+// 	'../assets/world.stl',
+// 	'../assets/two_plus_candle.stl',
+// 	'../assets/cube_twist.stl',
+// ]
+
 const files = [
-	'../assets/models/headtube.stl',
-	'../assets/models/welding_jig.stl',
-	'../assets/models/world.stl',
-	'../assets/models/apple_watch.stl',
-	'../assets/models/world.stl',
-	'../assets/models/two_plus_candle.stl',
-	'../assets/models/cube_twist.stl',
+	headtube,
+	welding_jig,
+	world,
+	apple_watch,
+	world,
+	two_plus_candle,
+	cube_twist
 ]
 
 const clock = new THREE.Clock();
