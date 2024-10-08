@@ -275,7 +275,7 @@ picture.img_row img {
 .bg_container {
 	display: grid;
 	max-width: 1200px;
-	grid-template-columns: 310px 2.5fr;
+	grid-template-columns: 330px 2.5fr;
 }
 
 .left_bar_placeholder {
@@ -292,7 +292,7 @@ picture.img_row img {
 	margin-right: 5px;
 	padding-left:10px;
 	height: 99vh;
-	width: 310px;
+	width: 330px;
 }
 
 .fullname {
@@ -344,15 +344,16 @@ picture.img_row img {
 	padding: 0.5em;
 }
 
+
 .menu ul {
 	background-color: black;	
 	list-style: none;
+	padding: 0;
 }
 
 .menu li {
-	display: flex;
-	justify-content: right;
 	width: 100%;
+	justify-content: right;
 }
 
 .menu li a {

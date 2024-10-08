@@ -34,7 +34,6 @@ module.exports = function(eleventyConfig) {
 		"./content/portfolio/comp_vision/report.pdf" : "./assets/pdf/report_CV.pdf"
 	});
 
-	
 	eleventyConfig.addCollection("projects", function(collections) {
 		return collections.getFilteredByTag("portfolio").sort(function(a, b) {
 			return a.data.order - b.data.order;
