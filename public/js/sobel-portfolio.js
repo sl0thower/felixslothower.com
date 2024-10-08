@@ -8,12 +8,12 @@ import { SobelOperatorShader } from 'three/examples/jsm/shaders/SobelOperatorSha
 
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 
-import headtube from '../assets/models/headtube.stl?url'
-import welding_jig from '../assets/models/welding_jig.stl?url'
-import world from '../assets/models/world.stl?url'
-import apple_watch from '../assets/models/apple_watch.stl?url'
-import two_plus_candle from '../assets/models/two_plus_candle.stl?url'
-import cube_twist from '../assets/models/cube_twist.stl?url'
+import headtube from '../assets/models/headtube.stl'
+import welding_jig from '../assets/models/welding_jig.stl'
+import world from '../assets/models/world.stl'
+import apple_watch from '../assets/models/apple_watch.stl'
+import two_plus_candle from '../assets/models/two_plus_candle.stl'
+import cube_twist from '../assets/models/cube_twist.stl'
 
 // specify the directory path you want to list the files of
 
