@@ -30,37 +30,47 @@
     font-style: normal;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 767px) {
+@media only screen and (min-width: 100px) and (max-width: 767px) {
 	div .bg_container {
 		display: grid;
-		grid-template-rows: 180px 1fr 20px;
+		grid-template-rows: 280px 1fr 20px;
 		grid-template-columns: 1fr;
+		/* width: 100%; */
 	}
+	
 	div .left_bar_placeholder {
 		display: block;
 	}
+
 	div .left_bar {
 		position: relative;
 		display: grid;
+		grid-auto-flow: row;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 60px 120px;
+		grid-template-rows: 60px 40px 180px;
 		background: none;
 		width: 100%;
 	}
-	div .sobel, div .email {
+
+	div .email {
 		display: none;
 	}
-	div .details {
-		grid-row-start: 2;
-		grid-row-end: 3;
-		grid-column-start: 1;
-		grid-column-end: 2;
+
+	div .fullname, div .details {
+		grid-column-end: span 2;
 	}
+
+	div #portfolio-canvas{
+		display: flex;
+		justify-content: center;
+	}
+
 	div .signature {
 		display: none;
 	}
+
 	.mobile-signature {
-		flex:auto;
+		padding-top: 0.5em;
 		padding-bottom: 1.5em;
 		width: 100%;
 		color:gray;
@@ -68,13 +78,15 @@
 		font-family: "source_sans_proitalic";
 		font-size:medium;
 	}
+
 	div .menu {
-		grid-row-start: 1;
+		/* grid-row-start: 1;
 		grid-row-end: 3;
-		grid-column-start: 2;
+		grid-column-start: 2; */
 		display: flex;
 		justify-content: center;
 	}
+
 	div .menu ul {
 		background-color: black;	
 		color: #c8ccc7;
@@ -92,11 +104,24 @@
 	div .menu li a {
 		padding-top: 0px;
 		text-decoration: none;
+		font-size: large;
 	}
 
 	div .main-wrapper {
 		margin: 2px;
 		padding: 10px;
+	}
+
+	div #project-text p, div #project-text p em {
+		font-size: medium;
+	}
+
+	div #project-text h1 {
+		font-size: x-large;
+	}
+
+	div #project-text h3 {
+		font-size: larger;
 	}
   }
 
@@ -343,7 +368,6 @@ picture.img_row img {
 	height: 300px;
 	padding: 0.5em;
 }
-
 
 .menu ul {
 	background-color: black;	

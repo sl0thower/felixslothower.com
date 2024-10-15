@@ -103,9 +103,6 @@ function init() {
 	effectSobel.uniforms[ 'resolution' ].value.y = h * window.devicePixelRatio;
 	composer.addPass( effectSobel );
 
-	// Removed resize function since the div should not be changing size
-	// window.addEventListener( 'resize', onWindowResize );
-
 	// mouse events
 	
 	const buttonSobel = document.getElementById('portfolio-canvas');
@@ -144,11 +141,21 @@ function switchMesh(target) {
 	camera.layers.enable(target);
 }
 
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-	composer.render()
+function resizeCanvasToDisplaySize() {
+	const canvas = renderer.domElement;
+	// look up the size the canvas is being displayed
+	const width = canvas.clientWidth;
+	const height = canvas.clientHeight;
+  
+	// adjust displayBuffer size to match
+	if (canvas.width !== width || canvas.height !== height) {
+	  // you must pass false here or three.js sadly fights the browser
+	  renderer.setSize(width, height, false);
+	  camera.aspect = width / height;
+	  camera.updateProjectionMatrix();
+  
+	  // update any render target sizes here
+	}
 }
 
 function animate() {
@@ -161,9 +168,14 @@ function animate() {
 		var timeDelta = clock.getDelta();
 		switched = true;
 	};
+
 	var timeDelta = clock.getDelta();
 	timeDelta *= 0.5;
+
+	resizeCanvasToDisplaySize();
+	
 	pivot.rotateY(timeDelta);
 	composer.render();
+	
 	requestAnimationFrame( animate );
 }

@@ -12,35 +12,38 @@
     bottom:0;
     left:0;
     background-color: black;
+    display: flex;
+    justify-content: center;
 }
 
 #my-column {
     position: absolute;
     display: grid;
-    grid-template-rows: 1fr 100%;
-    /* grid-column: ; */
-    top: 50%;
-    margin-top: -160px;
-    left: 50%;
-    margin-left: -215px;
-    font-family: 'RomanSerif';      
+    grid-template-rows: 1fr auto;
+    max-width: 430px;
+    width: 100%;
+    height: 100%;
+    font-family: 'RomanSerif';
 }
 
 #center-box {
-    background-color: #254221;
+    background-color: #141135;
+    border: 1px solid white;
+    /* background-color: #254221; */
     border-radius: 0.5em;
     max-width: 400px;
     padding-left: 15px; padding-right: 15px;
+    margin-left: 10px; margin-right: 10px;
     color: white;
+    align-self: center;
 }
 
 #signature {
-    flex-basis: 400px;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: lightgray;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 50px;
+    color: white
 }
 
 #signature img {

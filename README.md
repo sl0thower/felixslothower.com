@@ -7,6 +7,6 @@ Run local instance with `npx eleventy --serve`
 ## to-do
 - [x] Host using netlify and port to 11ty SSG framework
 - [x] Make portfolio compatible with mobile devices
-- [ ] re-include the wireframe animation *(solved statically, needs refinement)*
+- [x] re-include the wireframe animation *(solved statically, needs refinement)*
 - [ ] Add a light/dark mode toggle (taking inspiration from [Nolan's](https://www.nolanbonnie.com/) website.)
 - [ ] Expand to include a blog and photo library...
