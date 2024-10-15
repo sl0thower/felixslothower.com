@@ -8,20 +8,19 @@ pagination:
 ---
 {% set css %}
     {% include "public/css/home.css" %}
-	{% include "public/css/blog-navigator.css" %}
+	{% include "public/css/blog.css" %}
 {% endset %}
 
 <style>
 	{{css|safe}}
 </style>
 
-<div class="master-container">
-    <div class="left-empty"></div>    
-    <div class="center-container">
+<div class="outer-bucket">
+    <div class="center-rows">
         
         <div class="header-white-space"></div>
         <div class="main-content">
-            <div class="markdown-content">{{content | safe}}</div>
+            <div class="back-button"><a href="../index.html">~ back</a></div>
             <div class="blog-list">
                 {% for blog in blogs %}
                     <a class="list-link" href="{{ blog.url | url }}">
@@ -35,5 +34,4 @@ pagination:
             </div>
         </div>
     </div>
-    <div class="right-empty"></div>
-</div>
+

@@ -3,21 +3,24 @@ layout: base.njk
 ---
 {% set css %}
 	{% include "public/css/home.css" %}
-	{% include "public/css/blog-page.css" %}
+	{% include "public/css/blog.css" %}
 {% endset %}
 
 <style>
 	{{css|safe}}
 </style>
 
-<div class="back">
-	<div class="back-text"><a href="../index.html">~ back</a></div>
-</div>
 
-<div class="content">
-	{{content | safe}}
-</div>
-
-<div class="page-metadata">
-	Created:  <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
+<div class="outer-bucket">
+    <div class="center-rows">
+        
+        <div class="header-white-space"></div>
+        <div class="main-content">
+            <div class="back-button"><a href="../index.html">~ back</a></div>
+            <div class="markdown-content">{{content | safe}}</div>
+			<div class="page-metadata">
+				<time datetime="{{ page.date | htmlDateString }}">Created:  {{ page.date | readableDate }} </time>
+			</div>
+        </div>
+    </div>
 </div>

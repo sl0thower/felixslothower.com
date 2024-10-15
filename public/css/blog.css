@@ -3,8 +3,14 @@
     grid-template-columns: fit-content(45%) 1fr fit-content(45%);
 }
 
+hr {
+    margin-left: 10px; margin-right: 10px;
+    border-style: none;
+    height: 0.2em;
+}
+
 .list-link:hover hr {
-    background-color: #75a6e6;
+    background-color: #355e2f;
 }
 
 h1 {
@@ -24,19 +30,19 @@ time {
     padding-right: 5px;
 }
 
-
-.master-container {
-    display: grid;
-    grid-template-columns: 1fr 50em 1fr;
+.outer-bucket {
+    width: 40em;
+    margin: auto;
 }
 
-.center-container {
+.center-rows {
     display: grid;
     grid-template-rows: 100px fit-content(80%) 1fr;
 }
 
 .main-content {
-    background-color: #90c0ff;
+    background-color: #254221;
+    color: white;
     border-radius: 0.5em;
     padding-left: 10px;
     padding-right: 10px;
@@ -49,10 +55,32 @@ time {
     justify-content: center;
 }
 
-hr {
-    margin-left: 10px; margin-right: 10px;
-    border-style: none;
-    height: 0.2em;
-    background-color: #90c0ff;
-    
+
+picture img {
+    width: 300px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-metadata {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
