@@ -26,4 +26,4 @@ In our project we set out to benchmark the performance of different rectificatio
 {% image "./demo_tile_to_fisheye_segments.png", "unmerged segmentations"%}
 {% image "./demo_tile_to_fisheye_merged_segments.png", "merged segmentations"%}
 
-The full report can be found [here](../../assets/pdf/report_CV.pdf). (beware, it's a bit long!)
+The full report can be found [here](../assets/pdf/report_CV.pdf){target="_blank"}. (beware, it's a bit long!)

@@ -1,5 +1,15 @@
 ---
-layout: base.njk
+layout: image-navigator.njk
 ---
 
+{% set css %}
+	{% include "public/css/home.css" %}
+	{% include "public/css/image.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
 {{content | safe}}
+

@@ -1,29 +1,31 @@
 ---
 layout: base.njk
-pagination:
-    data: collections.image
-    alias: images
-    size: 20
 ---
 
 {% set css %}
 	{% include "public/css/home.css" %}
-	{# {% include "public/css/blog-navigator.css" %} #}
+	{% include "public/css/image.css" %}
 {% endset %}
 
 <style>
 	{{css|safe}}
 </style>
 
-<div class='main-bucket'>
-    {{content | safe}}
-    <div class="list-container">
-        {% for image in images %}
+<div id="center-rows">
+    <div id="blank-space"></div>
+    <div id="container">
+        <div id="back-button">
+        {{content | safe}}
+        </div>
+        <div id="image-reel">
             <article>
-                <h1>
-                <a href="{{ image.url | url }}">{{ image.data.title }}</a>
-                </h1>
+            {% for image in collections.images %}
+                <div id="image-in-reel">
+                {{image.content | safe}}
+                <p id="date">{{image.data.date.toUTCString().split(' ').splice(1,3).join(' ')}}</p>
+                </div>
+            {% endfor %}
             </article>
-        {% endfor %}
+        </div>
     </div>
 </div>

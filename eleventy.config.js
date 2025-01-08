@@ -1,8 +1,9 @@
 const { DateTime } = require("luxon");
 
 const markdownIt = require("markdown-it");
-// const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
+// const markdownItAnchor = require("markdown-it-anchor");
 // const mardownItImpFig = require("markdown-it-implicit-figures")
 
 // const mdfigcaption = require('markdown-it-image-figures');
@@ -32,6 +33,7 @@ module.exports = function(eleventyConfig) {
 		"./favicon.ico" : "./public/favicon.ico",
 		"./content/portfolio/activity/report.pdf" : "./public/assets/pdf/report_actvt.pdf",
 		"./content/portfolio/vision/report.pdf" : "./public/assets/pdf/report_CV.pdf",
+		"./public/assets/pdf/resume.pdf" : "./public/assets/pdf/resume.pdf",
 		"./public/assets/models/" : "./public/assets/models/",
 	});
 
@@ -40,14 +42,24 @@ module.exports = function(eleventyConfig) {
 			return a.data.order - b.data.order;
 		});
 	});
+
+	eleventyConfig.addCollection("images", function(collections) {
+		return collections.getFilteredByTag("image")
+	});
 	
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 	
-	let options = {
+	let mdOptions = {
 		html: true,
 		breaks: false,
+		linkify: true,
 	};
+
+	const markdownLib = markdownIt(mdOptions)
+		.use(markdownItAttrs)
+		.disable("code");
+
 	
 	// App plugins
 	// eleventyConfig.addPlugin(pluginNavigation);
@@ -60,8 +72,7 @@ module.exports = function(eleventyConfig) {
 		},
 	});
 
-	  
-	eleventyConfig.setLibrary("md", markdownIt(options));
+	eleventyConfig.setLibrary("md", markdownLib);
 	
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);

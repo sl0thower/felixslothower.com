@@ -20,7 +20,7 @@ pagination:
         
         <div class="header-white-space"></div>
         <div class="main-content">
-            <div class="back-button"><a href="../index.html">~ back</a></div>
+            <div class="back-button">{{content | safe}}</div>
             <div class="blog-list">
                 {% for blog in blogs %}
                     <a class="list-link" href="{{ blog.url | url }}">
