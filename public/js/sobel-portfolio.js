@@ -13,6 +13,8 @@ import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 let camera, scene, renderer, composer, pivot;
 let effectSobel;
 
+let portfolioRotating = localStorage.getItem('portfolioRotating') === 'true'
+
 const targets = {
 	additive:      1,
 	welding:       2,
@@ -35,7 +37,6 @@ const files = [
 
 const clock = new THREE.Clock();
 var currentLayer = targets.welcome;
-var isRotating = true;
 var switched = false;
 
 init(targets);
@@ -106,7 +107,11 @@ function init() {
 	// mouse events
 	
 	const buttonSobel = document.getElementById('portfolio-canvas');
-	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
+	buttonSobel.addEventListener('mousedown', function() {
+		portfolioRotating = !portfolioRotating; 
+		localStorage.setItem('portfolioRotating', portfolioRotating);
+		animate();
+	});
 	
 	camera.layers.enable(currentLayer);
 }
@@ -120,8 +125,6 @@ function addMeshListeners(buttonId, targetLayer) {
 
 function loadpage(target) {
 	const folder = Object.keys(targets)[target-1];
-	console.log(target)
-	console.log(folder)
 	fetch('/portfolio/'+folder+'/index.html').then(function (response) {
 		if (response.ok) {
 			return response.text();
@@ -159,7 +162,7 @@ function resizeCanvasToDisplaySize() {
 }
 
 function animate() {
-	if (!isRotating) {
+	if (!portfolioRotating) {
 		switched = false;
 		composer.render();
 		return;
@@ -170,7 +173,7 @@ function animate() {
 	};
 
 	var timeDelta = clock.getDelta();
-	timeDelta *= 0.5;
+	timeDelta *= 0.25;
 
 	resizeCanvasToDisplaySize();
 	

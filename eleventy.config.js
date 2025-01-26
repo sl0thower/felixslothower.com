@@ -44,7 +44,9 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addCollection("images", function(collections) {
-		return collections.getFilteredByTag("image")
+		return collections.getFilteredByTag("image").sort(function(a, b) {
+			return b.data.date - a.data.date;
+		});
 	});
 	
 	// Watch content images for the image pipeline.

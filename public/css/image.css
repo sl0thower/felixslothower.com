@@ -1,6 +1,6 @@
 #center-rows {
     display: grid;
-    grid-template-rows: 100px fit-content(80%);
+    grid-template-rows: 100px fit-content(80%) 400px;
     width: 40em;
     margin: auto;
 }
@@ -18,16 +18,15 @@
 
 #image-reel {
     color: white;
-    width: 650px;
 }
 
 #image-in-reel {
-    align-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    margin-bottom: 10px;
+    width: 500px;
 }
 
 #back-button {
@@ -38,17 +37,18 @@
 
 #date {
     color: gray;
-}
-
-picture {
-    height: auto;
-    grid-row: 1 / span 2;
+    margin-top: 0;
 }
 
 picture img {
-    width: auto;
-    height: 500px;
+    width: 500px;
+    height: auto;
     display: block;
     margin: auto;
     border-radius: 3px;
+}
+
+p {
+    margin: 5px;
+    margin-top: 8px;
 }

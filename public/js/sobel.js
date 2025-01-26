@@ -13,8 +13,9 @@ import { SobelOperatorShader } from 'three/examples/jsm/shaders/SobelOperatorSha
 let camera, scene, renderer, composer, pivot;
 let effectSobel;
 
+let isRotating = localStorage.getItem('isRotating') === 'true'
+
 const clock = new THREE.Clock();
-var isRotating = true;
 var switched = false;
 
 init();
@@ -77,7 +78,17 @@ function init() {
 	// mouse events
 	
 	const buttonSobel = document.getElementById('my-canvas');
-	buttonSobel.addEventListener('mousedown', function() {isRotating = !isRotating; animate()});
+	buttonSobel.addEventListener('mousedown', function() {
+		isRotating = !isRotating; 
+		localStorage.setItem('isRotating', isRotating);
+		animate();
+	});
+	
+	const centerBox = document.getElementById('center-box');
+	centerBox.addEventListener('mousedown', function(e) {
+			e.stopPropagation()
+		});
+	
 
 	camera.layers.enable(1);
 
