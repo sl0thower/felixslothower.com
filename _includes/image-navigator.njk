@@ -13,19 +13,27 @@ layout: base.njk
 
 <div id="center-rows">
     <div id="blank-space"></div>
-    <div id="container">
-        <div id="back-button">
-        {{content | safe}}
+    <div id="container0">
+        <div id="container">
+            <div id="back-button">
+            {{content | safe}}
+            </div>
+            <div id="image-reel">
+                <article>
+                {% for image in collections.images %}
+                    <div id="image-in-reel">
+                    {{image.content | safe}}
+                    <p id="date">{{image.data.date.toUTCString().split(' ').splice(1,3).join(' ')}}</p>
+                    </div>
+                {% endfor %}
+                </article>
+            </div>
+            <div id="signature">
+            <p>Designed and built by Felix Slothower</p>
+            <p class='year'>2020-{{page.date.getYear() + 1900}}</p>
+            <img src="/assets/icons/blueglass_icon_w.svg" alt="blueglass-logo">
+            </div>
         </div>
-        <div id="image-reel">
-            <article>
-            {% for image in collections.images %}
-                <div id="image-in-reel">
-                {{image.content | safe}}
-                <p id="date">{{image.data.date.toUTCString().split(' ').splice(1,3).join(' ')}}</p>
-                </div>
-            {% endfor %}
-            </article>
         </div>
     </div>
 </div>
