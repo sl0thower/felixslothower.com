@@ -10,3 +10,5 @@ Run local instance with `npx eleventy --serve`
 - [x] re-include the wireframe animation *(solved statically, needs refinement)*
 - [ ] Add a light/dark mode toggle (taking inspiration from [Nolan's](https://www.nolanbonnie.com/) website.)
 - [x] Expand to include a blog and photo library...
+- [ ] Unify the CSS library
+- [ ] Add link to return home from portfolio
