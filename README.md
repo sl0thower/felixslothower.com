@@ -9,4 +9,6 @@ Run local instance with `npx eleventy --serve`
 - [x] Make portfolio compatible with mobile devices
 - [x] re-include the wireframe animation *(solved statically, needs refinement)*
 - [ ] Add a light/dark mode toggle (taking inspiration from [Nolan's](https://www.nolanbonnie.com/) website.)
-- [ ] Expand to include a blog and photo library...
+- [x] Expand to include a blog and photo library...
+- [ ] Unify the CSS library
+- [ ] Add link to return home from portfolio
