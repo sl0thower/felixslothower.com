@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70mm"
+   height="59mm"
+   viewBox="0 0 70 59"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="speedsAndFeeds.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="293.80287"
+     inkscape:cy="225.56706"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer6" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect16336"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,2.1166667,0,1 @ F,0,0,1,0,2.1166667,0,1 @ F,0,0,1,0,2.1166667,0,1 @ F,0,0,1,0,2.1166667,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="8"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="background" />
+  <g
+     inkscape:label="part"
+     inkscape:groupmode="layer"
+     id="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="mill_3" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="mill_2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="mill_1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="text">
+    <g
+       id="g56647"
+       transform="translate(-0.11713758,-0.3321594)">
+      <path
+         style="fill:#e9e9d3;fill-opacity:1;fill-rule:evenodd;stroke:#a09e96;stroke-width:0.647;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect926"
+         width="69.352989"
+         height="58.352909"
+         x="0.44064298"
+         y="0.65570486"
+         inkscape:path-effect="#path-effect16336"
+         d="M 2.5573097,0.65570486 H 67.676965 A 2.1166667,2.1166667 45 0 1 69.793632,2.7723716 V 56.891947 a 2.1166667,2.1166667 135 0 1 -2.116667,2.116667 H 2.5573097 A 2.1166667,2.1166667 45 0 1 0.44064298,56.891947 l 0,-54.1195754 A 2.1166667,2.1166667 135 0 1 2.5573097,0.65570486 Z"
+         sodipodi:type="rect" />
+      <g
+         id="g12155"
+         transform="translate(-66.17412,-80.775688)">
+        <path
+           id="rect1148"
+           style="fill:#1d00ff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999"
+           d="m 390.49219,380.93945 c -3.76919,24.34849 -24.72674,42.30957 -49.36524,42.31246 -9.07984,-0.009 -20.67624,0 -25.75976,0 v 44.33403 h 150.6582 v -86.64649 z"
+           sodipodi:nodetypes="ccccccc"
+           transform="scale(0.26458333)" />
+        <path
+           style="fill:#745fff;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 105.13226,98.418249 c 0,0 0.43082,-2.751019 -0.77713,-4.972473 l 1.43747,0.144157 c 0,0 1.67247,2.601603 -0.66037,4.828321 z"
+           id="path8474"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:#745fff;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 106.65375,88.00841 c 0,0 1.76366,-2.15481 1.84589,-4.682106 l 1.1669,0.851727 c 0,0 0.12608,3.090245 -3.01282,3.830366 z"
+           id="path8474-5"
+           sodipodi:nodetypes="cccc" />
+        <g
+           id="g4553"
+           transform="translate(-61.380333,15.646665)">
+          <g
+             id="g4320">
+            <path
+               style="fill:#5c5c5c;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -13.21831 h -12.20325 c 0,0 -0.93076,12.35625 12.20325,13.21831 z"
+               id="path2260" />
+            <path
+               style="fill:#727272;fill-opacity:1;stroke:#000000;stroke-width:0.256895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 146.3736,92.759573 c 0,0 -0.59763,-1.737883 -0.6586,-4.35058 -0.0609,-2.608478 1.18615,-3.378316 1.18615,-5.419824 h 4.42843 v 1.774167 z"
+               id="path2375"
+               sodipodi:nodetypes="cscccc" />
+            <path
+               style="fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -11.3984 l -4.95598,7.950488 c 0,0 0.76758,2.968988 4.95598,3.447912 z"
+               id="path2126" />
+          </g>
+          <g
+             id="g4320-4"
+             transform="rotate(90,151.32958,82.989175)">
+            <path
+               style="fill:#5c5c5c;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -13.21831 h -12.20325 c 0,0 -0.93076,12.35625 12.20325,13.21831 z"
+               id="path2260-2" />
+            <path
+               style="fill:#727272;fill-opacity:1;stroke:#000000;stroke-width:0.256895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 146.3736,92.759573 c 0,0 -0.59763,-1.737883 -0.6586,-4.35058 -0.0609,-2.608478 1.18615,-3.378316 1.18615,-5.419824 h 4.42843 v 1.774167 z"
+               id="path2375-6"
+               sodipodi:nodetypes="cscccc" />
+            <path
+               style="fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -11.3984 l -4.95598,7.950488 c 0,0 0.76758,2.968988 4.95598,3.447912 z"
+               id="path2126-0" />
+          </g>
+          <g
+             id="g4320-4-9"
+             transform="rotate(180,151.32958,82.989169)">
+            <path
+               style="fill:#5c5c5c;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -13.21831 h -12.20325 c 0,0 -0.93076,12.35625 12.20325,13.21831 z"
+               id="path2260-2-3" />
+            <path
+               style="fill:#727272;fill-opacity:1;stroke:#000000;stroke-width:0.256895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 146.3736,92.759573 c 0,0 -0.59763,-1.737883 -0.6586,-4.35058 -0.0609,-2.608478 1.18615,-3.378316 1.18615,-5.419824 h 4.42843 v 1.774167 z"
+               id="path2375-6-2"
+               sodipodi:nodetypes="cscccc" />
+            <path
+               style="fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -11.3984 l -4.95598,7.950488 c 0,0 0.76758,2.968988 4.95598,3.447912 z"
+               id="path2126-0-0" />
+          </g>
+          <g
+             id="g4320-4-9-3"
+             transform="rotate(-90,151.32958,82.989172)">
+            <path
+               style="fill:#5c5c5c;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -13.21831 h -12.20325 c 0,0 -0.93076,12.35625 12.20325,13.21831 z"
+               id="path2260-2-3-7" />
+            <path
+               style="fill:#727272;fill-opacity:1;stroke:#000000;stroke-width:0.256895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 146.3736,92.759573 c 0,0 -0.59763,-1.737883 -0.6586,-4.35058 -0.0609,-2.608478 1.18615,-3.378316 1.18615,-5.419824 h 4.42843 v 1.774167 z"
+               id="path2375-6-2-6"
+               sodipodi:nodetypes="cscccc" />
+            <path
+               style="fill:#c0c0c0;fill-opacity:1;stroke:#000000;stroke-width:0.254999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 151.32958,96.207485 v -11.3984 l -4.95598,7.950488 c 0,0 0.76758,2.968988 4.95598,3.447912 z"
+               id="path2126-0-0-7" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g48886"
+         transform="matrix(0.83756493,0,0,0.83756493,-42.980358,-8.2648773)">
+        <text
+           xml:space="preserve"
+           style="font-size:8.46667px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+           x="59.383129"
+           y="72.610542"
+           id="text17022"><tspan
+             sodipodi:role="line"
+             id="tspan17020"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+             x="59.383129"
+             y="72.610542">Speeds &amp; Feeds</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:8.46667px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#1aabfa;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+           x="59.623215"
+           y="72.35675"
+           id="text17022-3"><tspan
+             sodipodi:role="line"
+             id="tspan17020-3"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print Bold';fill:#1aabfa;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+             x="59.623215"
+             y="72.35675">Speeds &amp; Feeds</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

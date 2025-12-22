@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+
+{% set css %}
+	{% include "public/css/tool.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
+<div class="back-button"><a href="../index.html">~ back</a></div>
+
+{{content | safe}}
+
+<form>
+  Tool Diameter: 
+  <input type="text" pattern="\d*">
+</form>
+
+<form>
+  Number of Flutes: 
+  <input type="text" pattern="\d*">
+</form>
+
+<label for="tool-select">Select tool material</label>
+<select name="materials" id="tool-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">HSS</option>
+  <option value="cat">Carbide</option>
+  </select>
+
+<form>
+  Tool Diameter: 
+  <input type="text" pattern="\d*">
+</form>

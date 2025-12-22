@@ -1,0 +1,31 @@
+---
+layout: base.njk
+pagination:
+    data: collections.tool
+    reverse: true
+    alias: tools
+    size: 20
+---
+{% set css %}
+	{% include "public/css/tool.css" %}
+{% endset %}
+
+<style>
+	{{css|safe}}
+</style>
+
+<div class="outer-bucket">
+    <div class="center-rows">
+        
+        <div class="header-white-space"></div>
+        <div class="main-content">
+            <div class="back-button">{{content | safe}}</div>
+            <div class="tool-list">
+                {% for tool in tools %}
+                    <a class="list-link" href="{{ tool.url | url }}">
+                        <img src="{{tool.data.link}}"/>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
