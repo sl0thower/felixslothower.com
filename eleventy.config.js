@@ -58,15 +58,15 @@ module.exports = function(eleventyConfig) {
 
 	
 	// App plugins
-	// eleventyConfig.addPlugin(pluginNavigation);
-	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	eleventyConfig.addPlugin(pluginBundle);
+	//eleventyConfig.addPlugin(pluginNavigation);
+	//eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	//eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
-	eleventyConfig.addPlugin(EleventyVitePlugin, {
-		viteOptions: {
-			assetsInclude: ['**/*.stl'],
-		},
-	});
+	//eleventyConfig.addPlugin(EleventyVitePlugin, {
+	//	viteOptions: {
+	//		assetsInclude: ['**/*.stl'],
+	//	},
+	//});
 
 	eleventyConfig.setLibrary("md", markdownLib);
 	
