@@ -30,11 +30,6 @@ module.exports = function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/" : "./",
-		"./favicon.ico" : "./public/favicon.ico",
-		"./content/portfolio/activity/report.pdf" : "./public/assets/pdf/report_actvt.pdf",
-		"./content/portfolio/vision/report.pdf" : "./public/assets/pdf/report_CV.pdf",
-		"./public/assets/pdf/resume.pdf" : "./public/assets/pdf/resume.pdf",
-		"./public/assets/models/" : "./public/assets/models/",
 	});
 
 	eleventyConfig.addCollection("projects", function(collections) {
@@ -62,11 +57,19 @@ module.exports = function(eleventyConfig) {
 	//eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	//eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginImages);
-	//eleventyConfig.addPlugin(EleventyVitePlugin, {
-	//	viteOptions: {
-	//		assetsInclude: ['**/*.stl'],
-	//	},
-	//});
+	// eleventyConfig.addPlugin(EleventyVitePlugin, {
+	// 	viteOptions: {
+	// 		assetsInclude: ['**/*.stl'],
+	// 	},
+	// });
+	eleventyConfig.addPlugin(async (eleventyConfig) => {
+    const { default: EleventyVitePlugin } = await import("@11ty/eleventy-plugin-vite");
+    eleventyConfig.addPlugin(EleventyVitePlugin, {
+        viteOptions: {
+            assetsInclude: ['**/*.stl'],
+        },
+    });
+});
 
 	eleventyConfig.setLibrary("md", markdownLib);
 	

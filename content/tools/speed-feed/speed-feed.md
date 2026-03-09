@@ -2,9 +2,9 @@
     tags: tool
     layout: tool-speedAndFeed.njk
     title: Speeds and Feeds
-    link: /assets/icons/speedsAndFeeds.svg
+    link: /assets/icons/speedsAndFeeds.png
+    order: 1
 ---
 
-welcome to the new speeds and feeds tool
+welcome to the new speeds and feeds tool!
 
-most of the text for this page will be in the _includes/nunjucks file.

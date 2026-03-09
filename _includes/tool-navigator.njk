@@ -2,7 +2,6 @@
 layout: base.njk
 pagination:
     data: collections.tool
-    reverse: true
     alias: tools
     size: 20
 ---
@@ -14,18 +13,18 @@ pagination:
 	{{css|safe}}
 </style>
 
-<div class="outer-bucket">
-    <div class="center-rows">
-        
-        <div class="header-white-space"></div>
-        <div class="main-content">
-            <div class="back-button">{{content | safe}}</div>
-            <div class="tool-list">
+<div id="my-canvas">
+    <div id="my-column">
+        <div id="my-toolbox">
+            <div class="back-button"><a href="../index.html">~ back</a></div>
+            <div id="page-text">{{content | safe}}</div>
+            <div id="tool-list">
                 {% for tool in tools %}
-                    <a class="list-link" href="{{ tool.url | url }}">
+                    <a id="tool-list-link" href="{{ tool.url | url }}">
                         <img src="{{tool.data.link}}"/>
                     </a>
                 {% endfor %}
             </div>
         </div>
     </div>
+</div>

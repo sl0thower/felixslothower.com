@@ -10,28 +10,28 @@ layout: base.njk
 	{{css|safe}}
 </style>
 
-<div class="back-button"><a href="../index.html">~ back</a></div>
+<script type="module" src="/js/speeds-feeds.js"></script>
 
-{{content | safe}}
-
-<form>
-  Tool Diameter: 
-  <input type="text" pattern="\d*">
-</form>
-
-<form>
-  Number of Flutes: 
-  <input type="text" pattern="\d*">
-</form>
-
-<label for="tool-select">Select tool material</label>
-<select name="materials" id="tool-select">
-  <option value="">--Please choose an option--</option>
-  <option value="dog">HSS</option>
-  <option value="cat">Carbide</option>
-  </select>
-
-<form>
-  Tool Diameter: 
-  <input type="text" pattern="\d*">
-</form>
+<div id="my-canvas">
+  <div id="my-column">
+    <div id="my-tool">
+      <div id="back-button"><a href="../index.html">~ back</a></div>
+      <div id="text">{{content | safe}}</div>
+      <div id="calculator">
+        <form id="calc-inputs">
+          Tool Diameter: <input type="text" name="calc-diameter" pattern="\d*"><br>
+          Number of Flutes: <input type="text" name="calc-flutes" pattern="\d*"><br>
+          <label id="calc-tool-material" for="tool-select">Select tool material</label>
+            <select name="materials" id="tool-select">
+              <option value="">--Please choose an option--</option>
+              <option value="dog">HSS</option>
+              <option value="cat">Carbide</option>
+            </select><br>
+          Depth of Cut: <input type="text" name="calc-depth" pattern="\d*"><br>
+          <button type="submit">Calculate</button>
+        </form>
+        </div>
+      <div id="result"></div>
+    </div>
+  </div>
+</div>
